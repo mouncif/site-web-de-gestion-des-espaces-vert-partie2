@@ -18,7 +18,9 @@ import { PhytosanitaireComponent } from "./Phytosanitaire/phytosanitaire/phytosa
 import { AddExpertiseComponent } from "./add-expertise/add-expertise.component";
 import { ListExpertiseComponent } from "./list-expertise/list-expertise.component";
 import { UpdateExpertiseComponent } from "./update-expertise/update-expertise.component";
-import { StatistiquesComponent } from './statistiques/statistiques.component';
+import { StatistiquesComponent } from "./statistiques/statistiques.component";
+import { ListPlantationComponent } from "./list-plantation/list-plantation.component";
+import { UpdatePlantationComponent } from "./update-plantation/update-plantation.component";
 
 const routes: Routes = [
   {
@@ -70,6 +72,14 @@ const routes: Routes = [
       {
         path: "plantation",
         component: PlantationComponent
+      },
+      {
+        path: "allPlantation",
+        component: ListPlantationComponent
+      },
+      {
+        path: "updatePlantation",
+        component: UpdatePlantationComponent
       },
       {
         path: "phytosanitaire",

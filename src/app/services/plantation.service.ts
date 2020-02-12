@@ -2,8 +2,6 @@ import { Injectable } from "@angular/core";
 import { FormGroup, Validators, FormControl } from "@angular/forms";
 import { HttpClientModule, HttpClient } from "@angular/common/http";
 import { Plantation } from "../models/plantation";
-import { Projet } from "../models/projet";
-import { Travaux } from "../models/travaux";
 
 @Injectable({
   providedIn: "root"
