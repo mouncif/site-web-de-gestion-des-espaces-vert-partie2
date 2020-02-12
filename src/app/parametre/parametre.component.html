@@ -3,6 +3,7 @@
         <div class="container">
             <h2 style=" margin-top: 10px; text-inline: center;">Password</h2>
             <div class="row" style=" margin-top: 20px; ">
+
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="well well-sm">
                         <div class="row">
@@ -11,29 +12,32 @@
                             </div>
                             <div class="col-sm-6 col-md-8">
                                 <div class="form-group">
-                                    <div class="form-label-group">
-                                        <input type="password" class="form-control" placeholder="Current Password" required="required">
-                                    </div>
-                                </div>
-                                <br />
-                                <div class="form-group">
-                                    <div class="form-label-group">
-                                        <input type="password" class="form-control" placeholder="New Password" required="required">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="form-label-group">
-                                        <input type="password" class="form-control" placeholder="Confirm Password" required="required">
-                                    </div>
-                                </div>
 
 
-                                <div>
-                                    <Button class="btn btn-success">Valider</Button>
+                                    <form [formGroup]="service.form" (submit)="updatePassword()">
+                                        <div class="form-row">
+                                            <div class="form-label-group">
+                                                <input type="password" class="form-control" formControlName="password" placeholder="Current Password" required="required">
+                                            </div>
+                                        </div>
+                                        <br />
+                                        <div class="form-row">
+                                            <div class="form-label-group">
+                                                <input type="password" class="form-control" placeholder="New Password" required="required">
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-label-group">
+                                                <input type="password" class="form-control" placeholder="Confirm Password" required="required">
+                                            </div>
+                                        </div>
+                                        <Button class="btn btn-success" type="submit">Valider</Button>
+                                    </form>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
