@@ -1,14 +1,14 @@
-import { BrowserModule } from "@angular/platform-browser";
-import { NgModule } from "@angular/core";
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from "./app.component";
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { IndexComponent } from "./index/index.component";
-import { LoginComponent } from "./login/login.component";
-import { RegisterComponent } from "./register/register.component";
-import { ResetPasswordComponent } from "./reset-password/reset-password.component";
+import { IndexComponent } from './index/index.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
 
 import { MaterialModule } from './material/material.module';
 import { FormsModule } from '@angular/forms';
@@ -24,11 +24,11 @@ import { ProfileComponent } from './profile/profile.component';
 import { ParametreComponent } from './parametre/parametre.component';
 import { StatistiquesComponent } from './statistiques/statistiques.component';
 
-import { ReclamationComponent } from "./reclamation/reclamation.component";
-import { AddReclamationComponent } from "./reclamation/add-reclamataion/add-reclamataion.component";
-import { ListReclamataionComponent } from "./reclamation/list-reclamataion/list-reclamataion.component";
-import { UpdateReclamationComponent } from "./reclamation/update-reclamation/update-reclamation.component";
-import { ReclamationService } from "./reclamation/services/reclamation.service";
+import { ReclamationComponent } from './reclamation/reclamation.component';
+import { AddReclamationComponent } from './reclamation/add-reclamataion/add-reclamataion.component';
+import { ListReclamataionComponent } from './reclamation/list-reclamataion/list-reclamataion.component';
+import { UpdateReclamationComponent } from './reclamation/update-reclamation/update-reclamation.component';
+import { ReclamationService } from './reclamation/services/reclamation.service';
 
 @NgModule({
   declarations: [
