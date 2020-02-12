@@ -42,13 +42,13 @@
     },
     {
       "id": 5,
-      "nom": "SeamlessA",
-      "prenom": "ResolverA",
+      "nom": "Seamlessb",
+      "prenom": "",
       "email": "seamless@gmail.com",
-      "tel": "05341542",
+      "tel": "",
       "password": "seamlessr",
-      "ville": "chicago",
-      "adress": "manhaten"
+      "ville": "",
+      "adress": ""
     },
     {
       "id": 6,
