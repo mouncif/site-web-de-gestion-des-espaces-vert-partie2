@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private mainRoutes: Router) { }
+  constructor(private routea: Router) { }
 
   ngOnInit() {
   }
