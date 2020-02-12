@@ -32,6 +32,10 @@ import { AddStationComponent } from "./station/add-station/add-station.component
 import { UpdateStationComponent } from "./station/update-station/update-station.component";
 import { StationService } from "./station/services/station.service";
 import { StatistiquesComponent } from "./statistiques/statistiques.component";
+import { PlantationComponent } from "./plantation/plantation.component";
+import { PhytosanitaireComponent } from "./Phytosanitaire/phytosanitaire/phytosanitaire.component";
+import { PhytosanitaireService } from "./services/phytosanitaire.service";
+import { PlantationService } from "./services/plantation.service";
 
 @NgModule({
   declarations: [
@@ -52,7 +56,9 @@ import { StatistiquesComponent } from "./statistiques/statistiques.component";
     UpdateReclamationComponent,
     ListStationComponent,
     AddStationComponent,
-    UpdateStationComponent
+    UpdateStationComponent,
+    PhytosanitaireComponent,
+    PlantationComponent
   ],
   imports: [
     BrowserModule,
@@ -69,7 +75,13 @@ import { StatistiquesComponent } from "./statistiques/statistiques.component";
   ],
   entryComponents: [ParametreComponent, ProfileComponent],
 
-  providers: [UserService, ReclamationService, StationService],
+  providers: [
+    PhytosanitaireService,
+    PlantationService,
+    UserService,
+    ReclamationService,
+    StationService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

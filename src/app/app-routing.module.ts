@@ -13,6 +13,8 @@ import { UpdateReclamationComponent } from "./reclamation/update-reclamation/upd
 import { AddStationComponent } from "./station/add-station/add-station.component";
 import { UpdateStationComponent } from "./station/update-station/update-station.component";
 import { ListStationComponent } from "./station/list-station/list-station.component";
+import { PlantationComponent } from "./plantation/plantation.component";
+import { PhytosanitaireComponent } from "./Phytosanitaire/phytosanitaire/phytosanitaire.component";
 
 const routes: Routes = [
   {
@@ -60,6 +62,14 @@ const routes: Routes = [
       {
         path: "updateStation",
         component: UpdateStationComponent
+      },
+      {
+        path: "plantation",
+        component: PlantationComponent
+      },
+      {
+        path: "phytosanitaire",
+        component: PhytosanitaireComponent
       }
     ]
   },

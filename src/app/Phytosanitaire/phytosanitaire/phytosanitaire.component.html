@@ -1,0 +1,228 @@
+<div class="main-menu-area mg-tb-40">
+    <div class="container">
+        <form [formGroup]="service.form" class="normal-form" (submit)="onSubmit()">
+            <mat-card>
+                <mat-card-content>
+                    <mat-card-title>Phytosanitaire</mat-card-title>
+                    <mat-accordion>
+                        <mat-expansion-panel>
+                            <mat-expansion-panel-header>
+                                <mat-panel-title> Informations générales </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <input type="hidden" formControlName="id">
+
+                            <mat-form-field appearance="fill">
+                                <mat-label>Type travaux</mat-label>
+                                <mat-select formControlName="type_travaux">
+                                    <mat-option value="Phytosanitaire">Phytosanitaire </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input formControlName="date_travaux" matInput [matDatepicker]="picker_trav"
+                                    placeholder="Date de travail">
+                                <mat-datepicker-toggle matSuffix [for]="picker_trav"></mat-datepicker-toggle>
+                                <mat-datepicker #picker_trav></mat-datepicker>
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input formControlName="heure" type="time" matInput placeholder="Heure">
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input formControlName="date_fin" matInput [matDatepicker]="picker_fin"
+                                    placeholder="Date de fin">
+                                <mat-datepicker-toggle matSuffix [for]="picker_fin"></mat-datepicker-toggle>
+                                <mat-datepicker #picker_fin></mat-datepicker>
+                            </mat-form-field>
+
+
+                            <mat-form-field>
+                                <input formControlName="reference_projet" matInput placeholder="Référence du projet">
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input formControlName="entreprise" matInput placeholder="Entreprise">
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input formControlName="agent_responsable" matInput placeholder="Responsable">
+                            </mat-form-field>
+
+                        </mat-expansion-panel>
+
+                        <mat-expansion-panel>
+                            <mat-expansion-panel-header>
+                                <mat-panel-title> Station et Arbres </mat-panel-title>
+                            </mat-expansion-panel-header>
+
+                            <mat-form-field>
+                                <input formControlName="Nom_station" matInput placeholder="Nom station">
+                                <mat-error>Ce champ est obligatoire.</mat-error>
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input formControlName="Secteur" matInput placeholder="Secteur">
+                                <mat-error>Ce champ est obligatoire.</mat-error>
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input formControlName="Nombre_Arbre" matInput placeholder="Nombre d'arbre">
+                                <mat-error>Ce champ est obligatoire.</mat-error>
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input formControlName="N_debut" matInput placeholder="N° debut">
+                                <mat-error>Ce champ est obligatoire.</mat-error>
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input formControlName="N_fin" matInput placeholder="N° fin">
+                                <mat-error>Ce champ est obligatoire.</mat-error>
+                            </mat-form-field>
+
+                            <mat-form-field appearance="fill">
+                                <mat-label>Forme</mat-label>
+                                <mat-select formControlName="forme" placeholder="Forme">
+                                    <mat-option value="Cépée">Cépée</mat-option>
+                                    <mat-option value="Tige">Tige</mat-option>
+                                    <mat-option value="Touffe">Touffe</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+
+                            <mat-form-field appearance="fill">
+                                <mat-label>Vitalite</mat-label>
+                                <mat-select formControlName="vitalite" placeholder="Vitalite">
+                                    <mat-option value="Vigoureux">Vigoureux </mat-option>
+                                    <mat-option value="Normal">Normal</mat-option>
+                                    <mat-option value="Dépérissant">Dépérissant</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+
+                            <mat-form-field appearance="fill">
+                                <mat-label>Stade de développement</mat-label>
+                                <mat-select formControlName="stade_dev" placeholder="Stade de développement">
+                                    <mat-option value="Jeune">Jeune </mat-option>
+                                    <mat-option value="Adulte">Adulte </mat-option>
+                                    <mat-option value="Sénescent">Sénescent</mat-option>
+                                    <mat-option value="Mort">Mort</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </mat-expansion-panel>
+
+                        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title> Atteintes </mat-panel-title>
+                            </mat-expansion-panel-header>
+
+                            <mat-form-field>
+                                <input formControlName="type_atteinte" matInput placeholder="Type atteinte">
+                                <mat-error>Ce champ est obligatoire.</mat-error>
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input formControlName="atteinte" matInput placeholder="Atteinte">
+                                <mat-error>Ce champ est obligatoire.</mat-error>
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input formControlName="localisation" matInput placeholder="Localisation">
+                                <mat-error>Ce champ est obligatoire.</mat-error>
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input formControlName="quentite" matInput placeholder="Quentite">
+                                <mat-error>Ce champ est obligatoire.</mat-error>
+                            </mat-form-field>
+
+
+                            <mat-form-field appearance="fill">
+                                <mat-label>dim X</mat-label>
+                                <input matInput type="number" placeholder="dim X" formControlName="dimX" min="0">
+                                <span matSuffix>CM</span>
+                            </mat-form-field>
+
+                            <mat-form-field appearance="fill">
+                                <mat-label>dim Y</mat-label>
+                                <input matInput type="number" placeholder="dim Y" formControlName="dimY" min="0">
+                                <span matSuffix>CM</span>
+                            </mat-form-field>
+
+                        </mat-expansion-panel>
+
+                        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title> Risques mecanique et Contraintes intensite </mat-panel-title>
+                            </mat-expansion-panel-header>
+
+                            <mat-form-field appearance="fill">
+                                <mat-label>Select</mat-label>
+                                <mat-select formControlName="contraintes_intensite"
+                                    placeholder="Contraintes d'intensite">
+                                    <mat-option value="Bâtiments">Bâtiments </mat-option>
+                                    <mat-option value="Eclairage">Eclairage </mat-option>
+                                    <mat-option value="Gabarit routier">Gabarit routier</mat-option>
+                                    <mat-option value="Lignes bus, tramway">Lignes bus, tramway</mat-option>
+                                    <mat-option value="Réseau aérien">Réseau aérien</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+
+
+                            <mat-form-field appearance="fill">
+                                <mat-label>Select</mat-label>
+                                <mat-select formControlName="risques_mecanique" placeholder="Risques mecanique">
+                                    <mat-option value="Nul">Nul </mat-option>
+                                    <mat-option value="Faible">Faible </mat-option>
+                                    <mat-option value="Moyen">Moyen</mat-option>
+                                    <mat-option value="Important">Important</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+
+
+                        </mat-expansion-panel>
+
+                        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title> Avencement </mat-panel-title>
+                            </mat-expansion-panel-header>
+
+                            <mat-form-field appearance="fill">
+                                <mat-label>Etat d'avencement</mat-label>
+                                <mat-select formControlName="taux_avencement" placeholder="taux_avencement">
+                                    <mat-option value="Publication des expressions d'intérêt">Publication des
+                                        expressions
+                                        d'intérêt</mat-option>
+                                    <mat-option value="Evaluation des expressions d'intérêt">Evaluation des expressions
+                                        d'intérêt</mat-option>
+                                    <mat-option value="Appel d'offres">Appel d'offres</mat-option>
+                                    <mat-option value="Evaluation de l'appel d'offres">Evaluation de l'appel d'offres
+                                    </mat-option>
+                                    <mat-option value="Négociation et approbation du contrat">Négociation et approbation
+                                        du
+                                        contrat</mat-option>
+                                    <mat-option value="exécution du projet">exécution du projet</mat-option>
+                                    <mat-option value="terminé">terminé</mat-option>
+                                    <mat-option value="annuler">annuler</mat-option>
+
+                                </mat-select>
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input formControlName="cout_travau" matInput placeholder="cout de travau">
+                            </mat-form-field>
+
+                            <div class="add-bottom-padding">
+                                <mat-slide-toggle formControlName="etat">Reglé</mat-slide-toggle>
+                            </div>
+                        </mat-expansion-panel>
+                        <div class="button-row">
+                            <button mat-raised-button color="primary" type="submit">Submit</button>
+                            <button mat-raised-button color="warn" type="reset" (click)="onClear()">Clear</button>
+                        </div>
+                    </mat-accordion>
+                </mat-card-content>
+            </mat-card>
+
+        </form>
+    </div>
+</div>
