@@ -18,6 +18,7 @@ import { PhytosanitaireComponent } from "./Phytosanitaire/phytosanitaire/phytosa
 import { AddExpertiseComponent } from "./add-expertise/add-expertise.component";
 import { ListExpertiseComponent } from "./list-expertise/list-expertise.component";
 import { UpdateExpertiseComponent } from "./update-expertise/update-expertise.component";
+import { StatistiquesComponent } from './statistiques/statistiques.component';
 
 const routes: Routes = [
   {
@@ -41,7 +42,7 @@ const routes: Routes = [
     component: HomeComponent,
     canActivate: [Authgard],
     children: [
-      { path: "", component: LoginComponent },
+      { path: "", component: StatistiquesComponent },
       {
         path: "allReclamation",
         component: ListReclamataionComponent
