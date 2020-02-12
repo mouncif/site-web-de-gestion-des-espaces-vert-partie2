@@ -268,5 +268,22 @@
       "ville": "Tranas",
       "adress": "Sweeden"
     }
+  ],
+  "reclamation": [
+    {
+      "id": 1,
+      "dossier": "2",
+      "date_reclamation": "2020-02-05T23:00:00.000Z",
+      "Nom_station": "satation1",
+      "Secteur": "secteur1",
+      "N_Arbre": "13",
+      "Demandeur": "mr x",
+      "Numero_courrier": "111111",
+      "date_reception": "2020-02-24T23:00:00.000Z",
+      "reclamation": "xxxxxxxxxxxxx",
+      "decision": "ok",
+      "date_decision": "2020-02-26T23:00:00.000Z",
+      "etat": true
+    }
   ]
 }

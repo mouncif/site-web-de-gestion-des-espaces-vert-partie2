@@ -1,0 +1,67 @@
+<div class="main-menu-area mg-tb-40">
+    <div class="container">
+        <mat-form-field>
+            <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+        </mat-form-field>
+
+        <div class="mat-elevation-z8">
+            <table mat-table [dataSource]="listData" matSort class="mat-elevation-z8">
+
+                <ng-container matColumnDef="dossier">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Dossier </th>
+                    <td mat-cell *matCellDef="let element"> {{element.dossier}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="date_reclamation">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> date_reclamation </th>
+                    <td mat-cell *matCellDef="let element"> {{element.date_reclamation}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="Nom_station">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Nom_station </th>
+                    <td mat-cell *matCellDef="let element"> {{element.Nom_station}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="Secteur">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Secteur </th>
+                    <td mat-cell *matCellDef="let element"> {{element.Secteur}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="N_Arbre">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> N_Arbre </th>
+                    <td mat-cell *matCellDef="let element"> {{element.N_Arbre}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="decision">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> decision </th>
+                    <td mat-cell *matCellDef="let element"> {{element.decision}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="etat">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Etat </th>
+                    <td mat-cell *matCellDef="let element">
+                        <i class="material-icons orange600" *ngIf="(!element.etat)">warning</i>
+                        <i class="material-icons green" *ngIf="(element.etat)">assignment_turned_in</i>
+                    </td>
+                </ng-container>
+
+                <ng-container matColumnDef="actions">
+                    <th mat-header-cell *matHeaderCellDef> Actions </th>
+                    <td mat-cell *matCellDef="let row">
+                        <button mat-icon-button (click)="onEdit(row)">
+                            <mat-icon>launch</mat-icon>
+                        </button>
+                        <button mat-icon-button (click)="onDelete(row.id)" color="warn">
+                            <mat-icon>delete_outline</mat-icon>
+                        </button>
+                    </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+
+            <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+        </div>
+    </div>
+</div>
