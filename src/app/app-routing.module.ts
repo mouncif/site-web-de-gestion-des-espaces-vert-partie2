@@ -10,6 +10,9 @@ import { Authgard } from "../app/periodics/authGard";
 import { ListReclamataionComponent } from "./reclamation/list-reclamataion/list-reclamataion.component";
 import { AddReclamationComponent } from "./reclamation/add-reclamataion/add-reclamataion.component";
 import { UpdateReclamationComponent } from "./reclamation/update-reclamation/update-reclamation.component";
+import { AddStationComponent } from "./station/add-station/add-station.component";
+import { UpdateStationComponent } from "./station/update-station/update-station.component";
+import { ListStationComponent } from "./station/list-station/list-station.component";
 
 const routes: Routes = [
   {
@@ -45,6 +48,18 @@ const routes: Routes = [
       {
         path: "updateReclamation",
         component: UpdateReclamationComponent
+      },
+      {
+        path: "allStation",
+        component: ListStationComponent
+      },
+      {
+        path: "addStation",
+        component: AddStationComponent
+      },
+      {
+        path: "updateStation",
+        component: UpdateStationComponent
       }
     ]
   },

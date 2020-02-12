@@ -27,6 +27,10 @@ import { AddReclamationComponent } from "./reclamation/add-reclamataion/add-recl
 import { ListReclamataionComponent } from "./reclamation/list-reclamataion/list-reclamataion.component";
 import { UpdateReclamationComponent } from "./reclamation/update-reclamation/update-reclamation.component";
 import { ReclamationService } from "./reclamation/services/reclamation.service";
+import { ListStationComponent } from "./station/list-station/list-station.component";
+import { AddStationComponent } from "./station/add-station/add-station.component";
+import { UpdateStationComponent } from "./station/update-station/update-station.component";
+import { StationService } from "./station/services/station.service";
 
 @NgModule({
   declarations: [
@@ -43,7 +47,10 @@ import { ReclamationService } from "./reclamation/services/reclamation.service";
     ReclamationComponent,
     AddReclamationComponent,
     ListReclamataionComponent,
-    UpdateReclamationComponent
+    UpdateReclamationComponent,
+    ListStationComponent,
+    AddStationComponent,
+    UpdateStationComponent
   ],
   imports: [
     BrowserModule,
@@ -60,7 +67,7 @@ import { ReclamationService } from "./reclamation/services/reclamation.service";
   ],
   entryComponents: [ParametreComponent, ProfileComponent],
 
-  providers: [UserService, ReclamationService],
+  providers: [UserService, ReclamationService, StationService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

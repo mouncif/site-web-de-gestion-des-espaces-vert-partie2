@@ -1,0 +1,67 @@
+<div class="main-menu-area mg-tb-40">
+    <div class="container">
+        <mat-form-field>
+            <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+        </mat-form-field>
+
+        <div class="mat-elevation-z8">
+            <table mat-table [dataSource]="listData" matSort class="mat-elevation-z8">
+
+                <ng-container matColumnDef="Nom_Station">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Nom Station</th>
+                    <td mat-cell *matCellDef="let element"> {{element.Nom_Station}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="Date_description">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Date description </th>
+                    <td mat-cell *matCellDef="let element"> {{element.Date_description}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="Secteur">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Secteur </th>
+                    <td mat-cell *matCellDef="let element"> {{element.Secteur}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="Quartier">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Quartier </th>
+                    <td mat-cell *matCellDef="let element"> {{element.Quartier}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="Localistaion">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Localistaion </th>
+                    <td mat-cell *matCellDef="let element"> {{element.Localistaion}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="vocation">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> vocation </th>
+                    <td mat-cell *matCellDef="let element"> {{element.vocation}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="Etat_general">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Etat_general </th>
+                    <td mat-cell *matCellDef="let element">
+                        <i class="material-icons orange600" *ngIf="(!element.Etat_general)">warning</i>
+                        <i class="material-icons green" *ngIf="(element.Etat_general)">assignment_turned_in</i>
+                    </td>
+                </ng-container>
+
+                <ng-container matColumnDef="actions">
+                    <th mat-header-cell *matHeaderCellDef> Actions </th>
+                    <td mat-cell *matCellDef="let row">
+                        <button mat-icon-button (click)="onEdit(row)">
+                            <mat-icon>launch</mat-icon>
+                        </button>
+                        <button mat-icon-button (click)="onDelete(row.id)" color="warn">
+                            <mat-icon>delete_outline</mat-icon>
+                        </button>
+                    </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+
+            <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+        </div>
+    </div>
+</div>

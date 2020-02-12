@@ -1,0 +1,115 @@
+<div class="main-menu-area mg-tb-40">
+    <div class="container">
+        <form [formGroup]="service.form" class="normal-form" (submit)="onSubmit()">
+            <mat-card>
+                <mat-card-content>
+                    <mat-card-title>Ajouter une Station</mat-card-title>
+                    <mat-accordion>
+                        <mat-expansion-panel>
+                            <mat-expansion-panel-header>
+                                <mat-panel-title> Station </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <input type="hidden" formControlName="id">
+                            <mat-form-field>
+                                <input formControlName="Nom_Station" matInput placeholder="Nom Station">
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input formControlName="Date_description" matInput [matDatepicker]="picker_dossier"
+                                    placeholder="Date description">
+                                <mat-datepicker-toggle matSuffix [for]="picker_dossier"></mat-datepicker-toggle>
+                                <mat-datepicker #picker_dossier></mat-datepicker>
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input formControlName="Secteur" matInput placeholder="Secteur">
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input formControlName="Quartier" matInput placeholder="Quartier">
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input formControlName="Localistaion" matInput placeholder="Localistaion">
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input formControlName="vocation" matInput placeholder="vocation">
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input formControlName="Phase_physiologique_dominante" matInput
+                                    placeholder="Phase physiologique dominante">
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input formControlName="Etat_general" matInput placeholder="Etat general">
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input formControlName="Conduite" matInput placeholder="Conduite">
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input formControlName="Revetement" matInput placeholder="Revetement">
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input formControlName="Nature_substrat" matInput placeholder="Nature substrat">
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input formControlName="protection" matInput placeholder="protection">
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input formControlName="Irrigation" matInput placeholder="Irrigation">
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input formControlName="Preconisation" matInput placeholder="Preconisation">
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input formControlName="Taille" matInput placeholder="Taille">
+                            </mat-form-field>
+
+                        </mat-expansion-panel>
+
+                        <mat-expansion-panel>
+                            <mat-expansion-panel-header>
+                                <mat-panel-title> Arrondissement</mat-panel-title>
+                            </mat-expansion-panel-header>
+
+                            <mat-form-field>
+                                <input formControlName="Arrondissement" matInput placeholder="Arrondissement">
+                                <mat-error>Ce champ est obligatoire.</mat-error>
+                            </mat-form-field>
+
+                        </mat-expansion-panel>
+
+                        <mat-expansion-panel>
+                            <mat-expansion-panel-header>
+                                <mat-panel-title> Zone</mat-panel-title>
+                            </mat-expansion-panel-header>
+
+                            <mat-form-field>
+                                <input formControlName="Zone" matInput placeholder="Zone">
+                                <mat-error>Ce champ est obligatoire.</mat-error>
+                            </mat-form-field>
+
+                        </mat-expansion-panel>
+
+
+                    </mat-accordion>
+                </mat-card-content>
+                <div class="button-row">
+                    <button mat-raised-button color="primary" type="submit"
+                        [disabled]="service.form.invalid">Submit</button>
+                    <button mat-raised-button color="warn" type="reset" (click)="onClear()">Clear</button>
+                </div>
+            </mat-card>
+
+        </form>
+    </div>
+</div>

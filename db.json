@@ -283,7 +283,29 @@
       "reclamation": "xxxxxxxxxxxxx",
       "decision": "ok",
       "date_decision": "2020-02-26T23:00:00.000Z",
-      "etat": true
+      "etat": false
+    }
+  ],
+  "station": [
+    {
+      "id": 1,
+      "Nom_Station": "dcdr",
+      "Date_description": "2020-02-13T23:00:00.000Z",
+      "Secteur": "dvd",
+      "Quartier": "dvdv",
+      "Localistaion": "dvvd",
+      "vocation": "vvvv",
+      "Phase_physiologique_dominante": "vv",
+      "Etat_general": "bon",
+      "Conduite": "ddv",
+      "Revetement": "dvdv",
+      "Nature_substrat": "dvdv",
+      "protection": "dvdv",
+      "Irrigation": "dvd",
+      "Preconisation": "dvd",
+      "Taille": "144523",
+      "Arrondissement": "fbfb",
+      "Zone": "fbfbfb"
     }
   ]
 }
