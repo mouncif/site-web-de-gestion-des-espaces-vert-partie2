@@ -28,7 +28,7 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
-    //canActivate: [Authgard],
+    canActivate: [Authgard],
     children: [
       { path: '',  component: LoginComponent },
       { path: 'log', component: LoginComponent },

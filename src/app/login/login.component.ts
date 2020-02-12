@@ -15,8 +15,7 @@ export class LoginComponent implements OnInit {
 
 
   constructor(private service: UserService, private router: Router) { }
-  private username: string;
-  private usera: User[] ;
+
   private user: User = {
     nom: '',
     prenom: '',
@@ -32,52 +31,64 @@ export class LoginComponent implements OnInit {
 
 
   ngOnInit() {
+
+    if (localStorage.getItem('fullname') == null){
+      console.log("Everything fine");
+    }else{
+      this.router.navigate(['/home']);
+    }
   }
 
   onClear() {
     this.service.initializeFormGroup();
     this.service.form.reset();
+    this.resetLocalStorage();
   }
 
+  resetLocalStorage() {
+    localStorage.removeItem('id');
+    localStorage.removeItem('fullname');
+    localStorage.removeItem('email');
+    localStorage.removeItem('tel');
+    localStorage.removeItem('ville');
+    localStorage.removeItem('username');
+    localStorage.removeItem('adress');
+  }
 
   onLogin(): void {
+    this.resetLocalStorage();
+    this.user = this.service.form.value;
 
-    this.service.getAll().subscribe((data: any) =>{
-      //this.username = res.nom;
-      this.users = data;
-
-      for ( var val of this.users){
-        console.log(val['email']);
-        if(this.user.email == val['nom']){
-          console.log("got it");
-        }else{
-          console.log("Not yet");
+    if (this.service.form.valid) {
+      this.user = this.service.form.value;
+      this.service.getAll().subscribe((data: any) => {
+        for (var val of data) {
+          if (this.user.email == val['email'] && this.user.password == val['password']) {
+            localStorage.setItem("id", val["id"]);
+            localStorage.setItem("fullname", val["nom"] + " " + val["prenom"]);
+            localStorage.setItem("email", val["email"]);
+            localStorage.setItem("tel", val["tel"]);
+            localStorage.setItem("ville", val["ville"]);
+            localStorage.setItem("adress", val["adress"]);
+            break;
+          } else {
+            this.resetLocalStorage();
+          }
         }
-      }
-      //console.log("Yeep" + data);
-    });
-
-    /*this.usera.forEach(function (value) {
-      console.log(value.adress);
-    });*/
-
-    //console.log("vad: "+this.user.email+"  More to get: "+this.usera);
-
-    //console.log(this.service.loginUser(this.user));
-    //if (this.service.loginUser(this.user)) {
-
-    /* if (this.service.form.valid) {
-       this.user = this.service.form.value;
-       console.log("email: " + this.user.email + " and password: " + this.user.password);
-       if (this.user.email == "admin@mail.com" && this.user.password == "admin1234") {
-         console.log("reached")
-         this.router.navigateByUrl("/home");
-       } else {
-         this.router.navigateByUrl("/register");
-       }
-     } else {
-       console.log("Invalid Identifiant Sir !!! ")
-     }*/
+        console.log("full name: " + localStorage.getItem("fullname"));
+        if (localStorage.getItem("fullname") == null) {
+          console.log("reached")
+          this.router.navigateByUrl("/register");
+        } else {
+          this.router.navigateByUrl("/home");
+        }
+      });
+    } else {
+      console.log("Invalid !")
+    }
   }
+
+
+
 
 }

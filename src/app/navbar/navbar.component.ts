@@ -34,4 +34,8 @@ export class NavbarComponent implements OnInit {
     //this.dialog.open(ProfileComponent, dialConfig).afterClosed().subscribe(data => this.fetchElements());
     this.dialog.open(ParametreComponent, dialConfig).afterClosed();
   }
+
+  disconnect() {
+    localStorage.removeItem('fullname');
+  }
 }

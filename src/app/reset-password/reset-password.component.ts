@@ -31,6 +31,11 @@ export class ResetPasswordComponent implements OnInit {
   }
 
   ngOnInit() {
+    if (localStorage.getItem('fullname') == null){
+      console.log("Everything fine");
+    }else{
+      this.router.navigate(['/home']);
+    }
   }
 
   onResetEmail(){

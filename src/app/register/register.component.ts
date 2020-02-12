@@ -29,6 +29,11 @@ export class RegisterComponent implements OnInit {
   users: User[] = [];
 
   ngOnInit() {
+    if (localStorage.getItem('fullname') == null){
+      console.log("Everything fine");
+    }else{
+      this.router.navigate(['/home']);
+    }
   }
 
   onClear() {

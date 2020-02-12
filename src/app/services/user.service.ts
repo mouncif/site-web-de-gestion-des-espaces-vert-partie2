@@ -68,8 +68,16 @@ export class UserService {
   }
 
   isLoggedIn() {
-    return false;
+    if (localStorage.getItem('fullname') == null) {
+      return false;
+    } else {
+      return true;
+    }
   }
+
+
+
+
 
 
 }

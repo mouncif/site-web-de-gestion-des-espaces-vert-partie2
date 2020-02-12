@@ -11,14 +11,19 @@ export class Authgard implements CanActivate {
     /*if (this.userService.isLoggedIn){
       console.log("fucked true");
       return true;
-
     }else{
       this.router.navigate(['/login']);
       console.log("fucked false");
       return false;
     }*/
-    console.log("can activate Reached  !!")
-    this.router.navigate(['/login']);
-    return false;
+    if (localStorage.getItem('fullname') == null){
+      this.router.navigate(['/login']);
+      return false;
+    }else{
+      //console.log("can activate Reached  !!")
+    //this.router.navigate(['/login']);
+    return true;
+    }
+
   }
 }

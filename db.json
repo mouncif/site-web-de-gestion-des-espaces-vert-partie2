@@ -257,6 +257,16 @@
     },
     {
       "id": 24
+    },
+    {
+      "id": 25,
+      "nom": "Hugo",
+      "prenom": "Leqlerq",
+      "email": "admin@admin.com",
+      "tel": "062511522",
+      "password": "123456789",
+      "ville": "Tranas",
+      "adress": "Sweeden"
     }
   ]
 }
