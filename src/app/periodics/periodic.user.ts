@@ -3,8 +3,9 @@ export class PeriodicUser {
   nom: string;
   prenom: string;
   email: string;
+  tel: string;
   password: string;
   ville: string;
   adress: string;
-  tel: string;
+
 }
