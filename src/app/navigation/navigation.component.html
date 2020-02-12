@@ -27,13 +27,17 @@
                     </div>
                     <div id="travaux" class="tab-pane notika-tab-menu-bg animated flipInX">
                         <ul class="notika-main-menu-dropdown">
-                            <li><a [routerLink]="['/home/reg']">Liste Travaux</a>
-                            </li>
                             <li><a routerLink="/home/plantation">Plantations</a>
                             </li>
-                            <li><a routerLink="/home/phytosanitaire">Diagnostiques</a>
+                            <li><a [routerLink]="['/home/reg']">Liste Plantations</a>
                             </li>
-                            <li><a href="compose-email.html">Expertise</a>
+                            <li><a routerLink="/home/phytosanitaire">Phytosanitaire</a>
+                            </li>
+                            <li><a [routerLink]="['/home/reg']">Liste Phytosanitaire</a>
+                            </li>
+                            <li><a routerLink="/home/addExpertise">Expertise</a>
+                            </li>
+                            <li><a routerLink="/home/allExpertise">Liste Expertise</a>
                             </li>
                         </ul>
                     </div>
