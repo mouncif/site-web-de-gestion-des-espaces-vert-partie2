@@ -283,7 +283,89 @@
       "reclamation": "xxxxxxxxxxxxx",
       "decision": "ok",
       "date_decision": "2020-02-26T23:00:00.000Z",
-      "etat": true
+      "etat": false
+    }
+  ],
+  "station": [
+    {
+      "id": 1,
+      "Nom_Station": "dcdr",
+      "Date_description": "2020-02-13T23:00:00.000Z",
+      "Secteur": "dvd",
+      "Quartier": "dvdv",
+      "Localistaion": "dvvd",
+      "vocation": "vvvv",
+      "Phase_physiologique_dominante": "vv",
+      "Etat_general": "bon",
+      "Conduite": "ddv",
+      "Revetement": "dvdv",
+      "Nature_substrat": "dvdv",
+      "protection": "dvdv",
+      "Irrigation": "dvd",
+      "Preconisation": "dvd",
+      "Taille": "144523",
+      "Arrondissement": "fbfb",
+      "Zone": "fbfbfb"
+    }
+  ],
+  "phytosanitaire": [
+    {
+      "id": 1,
+      "type_travaux": "Phytosanitaire",
+      "date_travaux": "2020-02-28T23:00:00.000Z",
+      "date_fin": "2020-02-28T23:00:00.000Z",
+      "entreprise": "fgerz",
+      "heure": "12:23",
+      "reference_projet": "sdfq",
+      "agent_responsable": "sfqsea",
+      "Nom_station": "gqre",
+      "Secteur": "fezq",
+      "Nombre_Arbre": "12",
+      "N_debut": "21",
+      "N_fin": "2",
+      "type_arbre": "",
+      "forme": "Tige",
+      "vitalite": "Normal",
+      "stade_dev": "Sénescent",
+      "type_atteinte": "sdfqsd",
+      "atteinte": "sdfqe",
+      "localisation": "sdqgd",
+      "quentite": "12",
+      "dimX": 23,
+      "dimY": 23,
+      "contraintes_intensite": "Eclairage",
+      "risques_mecanique": "Faible",
+      "taux_avencement": "Appel d'offres",
+      "cout_travau": "123",
+      "etat": false
+    }
+  ],
+  "plantation": [
+    {
+      "id": 1,
+      "type_travaux": "Plantation",
+      "date_travaux": "2020-02-20T23:00:00.000Z",
+      "date_fin": "2020-02-28T23:00:00.000Z",
+      "entreprise": "dgqre",
+      "reference_projet": "sdfsdq",
+      "agent_responsable": "sdfeq",
+      "Nom_station": "sdfqez",
+      "Secteur": "sdfeqs",
+      "Nombre_Arbre": "12",
+      "N_debut": "12",
+      "N_fin": "43",
+      "type_arbre": "Arbres",
+      "essences": "dfr",
+      "variete": "dfsre",
+      "type_preparation": "gzae",
+      "sols": "rgzer",
+      "Protection": "Existante",
+      "conduite": "sdgqe",
+      "irrigation": "Semi-automatique",
+      "Age": 2,
+      "taux_avencement": "Evaluation des expressions d'intérêt",
+      "cout_travau": "123",
+      "etat": false
     }
   ]
 }

@@ -1,0 +1,127 @@
+<div class="main-menu-area mg-tb-40">
+    <div class="container">
+        <form [formGroup]="service.form" class="normal-form" (submit)="onSubmit()">
+            <mat-card>
+                <mat-card-content>
+                    <mat-card-title>Ajouter une réclamation</mat-card-title>
+                    <mat-accordion>
+
+                        <mat-expansion-panel>
+                            <mat-expansion-panel-header>
+                                <mat-panel-title> Station </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <input type="hidden" formControlName="id">
+                            <mat-form-field>
+                                <input [readonly]="!isUpdate" formControlName="Nom_Station" matInput
+                                    placeholder="Nom Station">
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input [readonly]="!isUpdate" formControlName="Date_description" matInput
+                                    [matDatepicker]="picker_dossier" placeholder="Date description">
+                                <mat-datepicker-toggle matSuffix [for]="picker_dossier"></mat-datepicker-toggle>
+                                <mat-datepicker #picker_dossier></mat-datepicker>
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input [readonly]="!isUpdate" formControlName="Secteur" matInput placeholder="Secteur">
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input [readonly]="!isUpdate" formControlName="Quartier" matInput
+                                    placeholder="Quartier">
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input [readonly]="!isUpdate" formControlName="Localistaion" matInput
+                                    placeholder="Localistaion">
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input [readonly]="!isUpdate" formControlName="vocation" matInput
+                                    placeholder="vocation">
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input [readonly]="!isUpdate" formControlName="Phase_physiologique_dominante" matInput
+                                    placeholder="Phase physiologique dominante">
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input [readonly]="!isUpdate" formControlName="Etat_general" matInput
+                                    placeholder="Etat general">
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input [readonly]="!isUpdate" formControlName="Conduite" matInput
+                                    placeholder="Conduite">
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input [readonly]="!isUpdate" formControlName="Revetement" matInput
+                                    placeholder="Revetement">
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input [readonly]="!isUpdate" formControlName="Nature_substrat" matInput
+                                    placeholder="Nature substrat">
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input [readonly]="!isUpdate" formControlName="protection" matInput
+                                    placeholder="protection">
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input [readonly]="!isUpdate" formControlName="Irrigation" matInput
+                                    placeholder="Irrigation">
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input [readonly]="!isUpdate" formControlName="Preconisation" matInput
+                                    placeholder="Preconisation">
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input [readonly]="!isUpdate" formControlName="Taille" matInput placeholder="Taille">
+                            </mat-form-field>
+
+                        </mat-expansion-panel>
+
+                        <mat-expansion-panel>
+                            <mat-expansion-panel-header>
+                                <mat-panel-title> Arrondissement</mat-panel-title>
+                            </mat-expansion-panel-header>
+
+                            <mat-form-field>
+                                <input [readonly]="!isUpdate" formControlName="Arrondissement" matInput
+                                    placeholder="Arrondissement">
+                                <mat-error>Ce champ est obligatoire.</mat-error>
+                            </mat-form-field>
+
+                        </mat-expansion-panel>
+
+                        <mat-expansion-panel>
+                            <mat-expansion-panel-header>
+                                <mat-panel-title> Zone</mat-panel-title>
+                            </mat-expansion-panel-header>
+
+                            <mat-form-field>
+                                <input [readonly]="!isUpdate" formControlName="Zone" matInput placeholder="Zone">
+                                <mat-error>Ce champ est obligatoire.</mat-error>
+                            </mat-form-field>
+
+                        </mat-expansion-panel>
+
+                    </mat-accordion>
+                </mat-card-content>
+                <div class="button-row">
+                    <button mat-raised-button color="primary" type="submit" [disabled]="!isUpdate">submit</button>
+                    <button mat-raised-button color="accent" type="button" (click)="onUpdate()">Modifier</button>
+                    <button mat-raised-button color="warn" type="reset" (click)="onAnuller()">Annuler</button>
+                </div>
+            </mat-card>
+
+        </form>
+    </div>
+</div>
