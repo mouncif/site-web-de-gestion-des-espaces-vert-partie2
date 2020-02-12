@@ -2,13 +2,13 @@
   "users": [
     {
       "id": 1,
-      "nom": "json-server",
-      "prenom": "json-server",
+      "nom": "Banda",
+      "prenom": "Chikumbaso",
       "email": "email2@gmail.com",
       "password": "232323zd",
-      "ville": "city 1",
-      "adress": "M",
-      "tel": "0602656165"
+      "ville": "Lusaca",
+      "adress": "Zambia, Lusaca BP:515852",
+      "tel": "062545120"
     },
     {
       "id": 2,
@@ -42,8 +42,8 @@
     },
     {
       "id": 5,
-      "nom": "Seamless",
-      "prenom": "Resolver",
+      "nom": "SeamlessA",
+      "prenom": "ResolverA",
       "email": "seamless@gmail.com",
       "tel": "05341542",
       "password": "seamlessr",
@@ -52,13 +52,13 @@
     },
     {
       "id": 6,
-      "nom": "Rehaimi",
-      "prenom": "Abdeslam",
+      "nom": "RehaimiA",
+      "prenom": "AbdeslamA",
       "email": "abdeslam.rehaimi@gmail.com",
-      "tel": "062222222222",
+      "tel": "062222222222A",
       "password": "xxxxxxxxx",
-      "ville": "Agadir",
-      "adress": "Agadir"
+      "ville": "AgadirA",
+      "adress": "AgadirA"
     },
     {
       "user": {

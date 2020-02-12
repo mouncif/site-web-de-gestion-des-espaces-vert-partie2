@@ -4,6 +4,8 @@ import { MatSnackBar} from '@angular/material/snack-bar';
 import { MatTableDataSource, MatDialog, MatDialogConfig } from '@angular/material';
 import { ProfileComponent } from "../profile/profile.component";
 import { ParametreComponent } from "../parametre/parametre.component";
+import { UserService } from '../services/user.service';
+import { User } from '../models/model.user';
 
 @Component({
   selector: 'app-navbar',
@@ -12,11 +14,17 @@ import { ParametreComponent } from "../parametre/parametre.component";
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(private router:Router, public notification: MatSnackBar, private dialog: MatDialog) { }
+  constructor(private service: UserService, private router:Router, public notification: MatSnackBar, private dialog: MatDialog) { }
   public username: string ;
 
   ngOnInit() {
-    this.username = localStorage.getItem('fullname');
+    this.service.findUser(localStorage.getItem('id')).subscribe(
+      (user: User) => {
+        console.log("here");
+        this.username = user.nom + " " + user.prenom;
+      }
+    );
+    //this.username = localStorage.getItem('fullname');
   }
 
   showProfile(){

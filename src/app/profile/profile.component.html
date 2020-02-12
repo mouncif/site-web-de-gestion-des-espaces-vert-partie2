@@ -12,7 +12,7 @@
                             <div class="col-sm-6 col-md-8">
                                 <h4>
                                     {{fullname}} </h4>
-                                <small><cite title="San Francisco, USA">{{address}}, {{ville}} <i
+                                <small><cite title="San Francisco, USA">{{adress}}, {{ville}} <i
                       class="glyphicon glyphicon-map-marker">
                     </i></cite></small>
                                 <p>
@@ -44,12 +44,12 @@
                                         <div class="form-row">
                                             <div class="col-md-6">
                                                 <div class="form-label-group">
-                                                    <input type="text" id="firstName" class="form-control" placeholder="Nom" required="required" value=" {{nom}} " autofocus="autofocus">
+                                                    <input type="text" class="form-control" formControlName="nom" required="required" [(value)]="this.nom">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-label-group">
-                                                    <input type="text" id="lastName" class="form-control" placeholder="Prenom" value=" {{prenom}} " required="required">
+                                                    <input type="text" class="form-control" formControlName="prenom" [(value)]="this.prenom " required="required">
                                                 </div>
                                             </div>
                                         </div>
@@ -58,26 +58,27 @@
                                         <div class="form-row">
                                             <div class="col-md-12">
                                                 <div class="form-label-group">
-                                                    <input type="text" class="form-control" placeholder="Address" required="required" value=" {{ address }} " autofocus="autofocus">
+                                                    <input type="text" class="form-control" formControlName="adress" required="required" [(value)]="this.adress">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="form-row">
                                             <div class="col-md-6">
                                                 <div class="form-label-group">
-                                                    <input type="text" class="form-control" placeholder="Ville" value=" {{ ville }} " required="required">
+                                                    <input type="text" class="form-control" formControlName="ville" [(value)]="this.ville" equired="required">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-label-group">
-                                                    <input type="text" class="form-control" placeholder="Tel" required="required" value=" {{ tel }} " autofocus="autofocus">
+                                                    <input type="text" class="form-control" formControlName="tel" required="required" [(value)]="this.tel">
                                                 </div>
                                             </div>
                                         </div>
+                                        <Button class="btn btn-success" type="submit">Valider</Button>
                                     </form>
                                 </div>
                                 <div>
-                                    <Button class="btn btn-success" type="submit">Valider</Button>
+
                                 </div>
                             </div>
                         </div>

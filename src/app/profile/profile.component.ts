@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {MatTabsModule} from '@angular/material/tabs';
+import { MatTabsModule } from '@angular/material/tabs';
 import { UserService } from '../services/user.service';
 import { User } from '../models/model.user';
 
@@ -13,38 +13,64 @@ export class ProfileComponent implements OnInit {
   private fullname: string;
   private email: string;
   private tel: string;
-  private address: string;
+  private adress: string;
   private ville: string;
   private nom: string;
   private prenom: string;
 
-  private user: User = {
-    nom: '',
-    prenom: '',
-    email: '',
-    password: '',
-    ville: '',
-    adress: '',
-    tel: ''
-  };
+  private user: User;
+  private otheruser: User;
 
-  constructor(private service: UserService ) {}
+  constructor(private service: UserService) { }
 
   ngOnInit() {
-    this.fullname = localStorage.getItem('fullname');
-    this.address = localStorage.getItem('adress');
+    /*
+    this.adress = localStorage.getItem('adress');
     this.email = localStorage.getItem('email');
     this.tel = localStorage.getItem('tel');
     this.ville = localStorage.getItem('ville');
     this.nom = localStorage.getItem('nom');
     this.prenom = localStorage.getItem('prenom');
+    */
+    this.service.findUser(localStorage.getItem('id')).subscribe(
+      (user: User) => {
+        console.log("here");
+        this.fullname = user.nom + " " + user.prenom;
+        this.otheruser = user;
+        this.adress = user.adress;
+        this.email = user.email;
+        this.tel = user.tel;
+        this.ville = user.ville;
+        this.nom = user.nom;
+        this.prenom = user.prenom;
+      }
+    );
   }
 
-  update(){
+  update() {
     this.user = this.service.form.value;
-    this.user.id = Number(localStorage.getItem('id'));
-    //this.service.update(this.user );
-    this.service.populateform(this.user);
+    console.log(this.user.nom);
+    console.log(this.user.prenom);
+    console.log("id loc " + localStorage.getItem('id'));
+
+
+    this.service.findUser(localStorage.getItem('id')).subscribe(
+      (user: User) => {
+        user.nom = this.user.nom;
+        user.prenom = this.user.prenom;
+        user.ville = this.user.ville;
+        user.adress = this.user.adress;
+        user.tel = this.user.tel;
+        console.log(user.id, " BLALAL");
+        this.service.update(user).subscribe();
+        console.log("Ok");
+      }
+    );
+
+    //this.user = this.service.form.value;
+
+    //console.log("reached"+ this.user.id);
+    //this.service.populateform(this.user);
   }
 
 }

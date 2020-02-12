@@ -76,6 +76,11 @@ export class UserService {
   }
 
 
+  findUser(id){
+    return this.http.get<User>(`${this.url}/${id}`);
+  }
+
+
 
 
 
