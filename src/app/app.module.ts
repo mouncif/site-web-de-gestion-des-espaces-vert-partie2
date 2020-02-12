@@ -31,6 +31,7 @@ import { ListStationComponent } from "./station/list-station/list-station.compon
 import { AddStationComponent } from "./station/add-station/add-station.component";
 import { UpdateStationComponent } from "./station/update-station/update-station.component";
 import { StationService } from "./station/services/station.service";
+import { StatistiquesComponent } from "./statistiques/statistiques.component";
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { StationService } from "./station/services/station.service";
     NavigationComponent,
     ProfileComponent,
     ParametreComponent,
+    StatistiquesComponent,
     ReclamationComponent,
     AddReclamationComponent,
     ListReclamataionComponent,
