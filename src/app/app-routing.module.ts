@@ -21,6 +21,8 @@ import { UpdateExpertiseComponent } from "./update-expertise/update-expertise.co
 import { StatistiquesComponent } from "./statistiques/statistiques.component";
 import { ListPlantationComponent } from "./list-plantation/list-plantation.component";
 import { UpdatePlantationComponent } from "./update-plantation/update-plantation.component";
+import { ListPhytosanitaireComponent } from "./list-phytosanitaire/list-phytosanitaire.component";
+import { UpdatePhytosanitaireComponent } from "./update-phytosanitaire/update-phytosanitaire.component";
 
 const routes: Routes = [
   {
@@ -96,6 +98,14 @@ const routes: Routes = [
       {
         path: "updateExpertise",
         component: UpdateExpertiseComponent
+      },
+      {
+        path: "allPhytosanitaire",
+        component: ListPhytosanitaireComponent
+      },
+      {
+        path: "updatePhytosanitaire",
+        component: UpdatePhytosanitaireComponent
       }
     ]
   },
