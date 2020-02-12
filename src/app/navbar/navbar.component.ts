@@ -37,5 +37,6 @@ export class NavbarComponent implements OnInit {
 
   disconnect() {
     localStorage.removeItem('fullname');
+    this.router.navigateByUrl("/login");
   }
 }

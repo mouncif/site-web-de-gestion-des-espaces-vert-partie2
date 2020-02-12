@@ -10,11 +10,11 @@
                 <div class="panel-body">
                     <form [formGroup]="service.form" class="normal-form" (submit)="onLogin()">
                         <mat-form-field class="displayB">
-                            <input formControlName="email" matInput placeholder="Email *">
+                            <input formControlName="email" matInput placeholder="Email *" value="seamless@gmail.com">
                             <mat-error>Invalid email address.</mat-error>
                         </mat-form-field>
                         <mat-form-field class="displayB">
-                            <input formControlName="password" matInput placeholder="Password *">
+                            <input formControlName="password" matInput placeholder="Password *" value="seamlessr">
                             <mat-error *ngIf="service.form.controls['password'].errors?.required">This field is mandatory.</mat-error>
                             <mat-error *ngIf="service.form.controls['password'].errors?.minlength">Minimum 8 charactors neede d.
                             </mat-error>
