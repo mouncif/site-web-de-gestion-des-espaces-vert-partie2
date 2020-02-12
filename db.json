@@ -1,0 +1,262 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "nom": "json-server",
+      "prenom": "json-server",
+      "email": "email2@gmail.com",
+      "password": "232323zd",
+      "ville": "city 1",
+      "adress": "M",
+      "tel": "0602656165"
+    },
+    {
+      "id": 2,
+      "nom": "Rehaimi",
+      "prenom": "Abdeslam",
+      "email": "abdeslam.rehaimi@gmail.com",
+      "tel": "062522222",
+      "password": "0000000000",
+      "ville": "Agadir",
+      "adress": "youssoufia"
+    },
+    {
+      "id": 3,
+      "nom": "Kamal",
+      "prenom": "Ousama",
+      "email": "kama@gmail.com",
+      "tel": "0625251452",
+      "password": "123456789",
+      "ville": "Agadir",
+      "adress": "Inchaden Chtouka Ait Bah"
+    },
+    {
+      "id": 4,
+      "nom": "ffffff",
+      "prenom": "fffffff",
+      "email": "ffffff@ffff.ff",
+      "tel": "ffffffffffffffffff",
+      "password": "fffffffff",
+      "ville": "fffffffffffff",
+      "adress": "fffffffffffff"
+    },
+    {
+      "id": 5,
+      "nom": "Seamless",
+      "prenom": "Resolver",
+      "email": "seamless@gmail.com",
+      "tel": "05341542",
+      "password": "seamlessr",
+      "ville": "chicago",
+      "adress": "manhaten"
+    },
+    {
+      "id": 6,
+      "nom": "Rehaimi",
+      "prenom": "Abdeslam",
+      "email": "abdeslam.rehaimi@gmail.com",
+      "tel": "062222222222",
+      "password": "xxxxxxxxx",
+      "ville": "Agadir",
+      "adress": "Agadir"
+    },
+    {
+      "user": {
+        "nom": "",
+        "prenom": "",
+        "email": "",
+        "password": "",
+        "ville": "",
+        "adress": "",
+        "tel": ""
+      },
+      "id": 7
+    },
+    {
+      "user": {
+        "nom": "",
+        "prenom": "",
+        "email": "",
+        "password": "",
+        "ville": "",
+        "adress": "",
+        "tel": ""
+      },
+      "id": 8
+    },
+    {
+      "user": {
+        "nom": "",
+        "prenom": "",
+        "email": "",
+        "password": "",
+        "ville": "",
+        "adress": "",
+        "tel": ""
+      },
+      "id": 9
+    },
+    {
+      "user": {
+        "nom": "",
+        "prenom": "",
+        "email": "",
+        "password": "",
+        "ville": "",
+        "adress": "",
+        "tel": ""
+      },
+      "id": 10
+    },
+    {
+      "user": {
+        "nom": "",
+        "prenom": "",
+        "email": "",
+        "password": "",
+        "ville": "",
+        "adress": "",
+        "tel": ""
+      },
+      "id": 11
+    },
+    {
+      "user": {
+        "nom": "",
+        "prenom": "",
+        "email": "",
+        "password": "",
+        "ville": "",
+        "adress": "",
+        "tel": ""
+      },
+      "id": 12
+    },
+    {
+      "user": {
+        "nom": "",
+        "prenom": "",
+        "email": "",
+        "password": "",
+        "ville": "",
+        "adress": "",
+        "tel": ""
+      },
+      "id": 13
+    },
+    {
+      "user": {
+        "nom": "",
+        "prenom": "",
+        "email": "",
+        "password": "",
+        "ville": "",
+        "adress": "",
+        "tel": ""
+      },
+      "id": 14
+    },
+    {
+      "user": {
+        "nom": "",
+        "prenom": "",
+        "email": "",
+        "password": "",
+        "ville": "",
+        "adress": "",
+        "tel": ""
+      },
+      "id": 15
+    },
+    {
+      "user": {
+        "nom": "",
+        "prenom": "",
+        "email": "",
+        "password": "",
+        "ville": "",
+        "adress": "",
+        "tel": ""
+      },
+      "id": 16
+    },
+    {
+      "user": {
+        "nom": "",
+        "prenom": "",
+        "email": "",
+        "password": "",
+        "ville": "",
+        "adress": "",
+        "tel": ""
+      },
+      "id": 17
+    },
+    {
+      "user": {
+        "nom": "",
+        "prenom": "",
+        "email": "",
+        "password": "",
+        "ville": "",
+        "adress": "",
+        "tel": ""
+      },
+      "id": 18
+    },
+    {
+      "user": {
+        "nom": "",
+        "prenom": "",
+        "email": "",
+        "password": "",
+        "ville": "",
+        "adress": "",
+        "tel": ""
+      },
+      "id": 19
+    },
+    {
+      "user": {
+        "nom": "",
+        "prenom": "",
+        "email": "",
+        "password": "",
+        "ville": "",
+        "adress": "",
+        "tel": ""
+      },
+      "id": 20
+    },
+    {
+      "user": {
+        "nom": "",
+        "prenom": "",
+        "email": "",
+        "password": "",
+        "ville": "",
+        "adress": "",
+        "tel": ""
+      },
+      "id": 21
+    },
+    {
+      "user": {
+        "nom": "",
+        "prenom": "",
+        "email": "",
+        "password": "",
+        "ville": "",
+        "adress": "",
+        "tel": ""
+      },
+      "id": 22
+    },
+    {
+      "id": 23
+    },
+    {
+      "id": 24
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+.centerItem {
+    text-align: center;
+}
+
+.cover-container {
+    max-width: 100%;
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
+
+
+/*
+ * Header
+ */
+
+.cover {
+    padding: 0 1.5rem;
+}
+
+.cover .btn-lg {
+    padding: .75rem 1.25rem;
+    font-weight: 700;
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+button {
+    border-radius: 12px;
+    background-color: green;
+    text-emphasis-color: red;
+}

@@ -1,0 +1,86 @@
+<div class="main-menu-area mg-tb-40">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <ul class="nav nav-tabs notika-menu-wrap menu-it-icon-pro">
+                    <li><a data-toggle="tab" href="#home"><i class="notika-icon notika-house"></i>Home</a>
+                    </li>
+                    <li><a data-toggle="tab" href="#travaux"><i class="notika-icon notika-app"></i> Travaux</a>
+                    </li>
+                    <li><a data-toggle="tab" href="#stations"><i class="notika-icon notika-eye"></i> Stations</a>
+                    </li>
+                    <li><a data-toggle="tab" href="#arbres"><i class="adminpro-icon adminpro-bird"></i> Arbres</a>
+                    </li>
+                    <li><a data-toggle="tab" href="#reclamation"><i class="notika-icon notika-form"></i> Reclamation</a>
+                    </li>
+                    <li><a data-toggle="tab" href="#parametre"><i class="notika-icon notika-settings"></i> Parametre</a>
+                    </li>
+                    <li><a data-toggle="tab" href="#about"><i class="notika-icon notika-support"></i> Apropos</a>
+                    </li>
+                </ul>
+                <div class="tab-content custom-menu-content">
+                    <div id="home" class="tab-pane active in notika-tab-menu-bg animated flipInX">
+                        <ul class="notika-main-menu-dropdown">
+                            <li><a [routerLink]="['/home/log']">Statistiques</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="travaux" class="tab-pane notika-tab-menu-bg animated flipInX">
+                        <ul class="notika-main-menu-dropdown">
+                            <li><a [routerLink]="['/home/reg']">Liste Travaux</a>
+                            </li>
+                            <li><a href="view-email.html">Plantations</a>
+                            </li>
+                            <li><a href="compose-email.html">Diagnostiques</a>
+                            </li>
+                            <li><a href="compose-email.html">Expertise</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="stations" class="tab-pane notika-tab-menu-bg animated flipInX">
+                        <ul class="notika-main-menu-dropdown">
+                            <li><a href="animations.html">List Stations</a>
+                            </li>
+                            <li><a href="google-map.html">Nouveau Station</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="arbres" class="tab-pane notika-tab-menu-bg animated flipInX">
+                        <ul class="notika-main-menu-dropdown">
+                            <li><a href="flot-charts.html">List Arbres</a>
+                            </li>
+                            <li><a href="bar-charts.html">Nouveau Arbre</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div id="reclamation" class="tab-pane notika-tab-menu-bg animated flipInX">
+                        <ul class="notika-main-menu-dropdown">
+                            <li><a href="normal-table.html">List Reclamation</a>
+                            </li>
+                            <li><a href="data-table.html">Nouveau Reclamation</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="parametre" class="tab-pane notika-tab-menu-bg animated flipInX">
+                        <ul class="notika-main-menu-dropdown">
+                            <li><a  (click)="showProfile()">Profile</a>
+                            </li>
+                            <li><a (click)="showSettings()">Parametre</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="about" class="tab-pane notika-tab-menu-bg animated flipInX">
+                        <ul class="notika-main-menu-dropdown">
+                            <li><a href="notification.html">Manuels</a>
+                            </li>
+                            <li><a href="notification.html">About</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

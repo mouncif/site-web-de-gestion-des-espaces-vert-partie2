@@ -1,0 +1,63 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12"></div>
+        <div class="col-md-4 col-md-4 col-sm-4 col-xs-12" style="margin-top: 5%; margin-bottom: 1%;">
+            <div class="text-center m-b-md custom-login">
+                <h3>Bienvenu !</h3>
+                <p>Veullez sinscrire svp!</p>
+            </div>
+            <div class="displayB">
+                <div class="panel-body">
+                    <form [formGroup]="service.form" class="normal-form" (submit)="onRegister()">
+                        <mat-form-field class="displayB">
+                            <input formControlName="email" matInput placeholder="Email *">
+                            <mat-error>Invalid email address.</mat-error>
+                        </mat-form-field>
+
+                        <div class="displayB">
+                            <mat-form-field>
+                                <input formControlName="nom" matInput placeholder="Nom ">
+                                <mat-error>Nom Invalide.</mat-error>
+                            </mat-form-field>
+                            <mat-form-field style="float: right;">
+                                <input formControlName="prenom" matInput placeholder="Prenom ">
+                                <mat-error>Prenom Invalide.</mat-error>
+                            </mat-form-field>
+                        </div>
+
+                        <div class="displayB">
+                            <mat-form-field>
+                                <input formControlName="ville" matInput placeholder="Ville ">
+                                <mat-error>Ville Invalide.</mat-error>
+                            </mat-form-field>
+                            <mat-form-field style="float: right;">
+                                <input formControlName="tel" matInput placeholder="Tel ">
+                                <mat-error>tel Invalide.</mat-error>
+                            </mat-form-field>
+                        </div>
+
+                        <mat-form-field class="displayB">
+                            <input formControlName="adress" matInput placeholder="Adress ">
+                            <mat-error>adress Invalide.</mat-error>
+                        </mat-form-field>
+
+
+
+                        <mat-form-field class="displayB">
+                            <input formControlName="password" matInput placeholder="Password *">
+                            <mat-error *ngIf="service.form.controls['password'].errors?.required">This field is mandatory.</mat-error>
+                            <mat-error *ngIf="service.form.controls['password'].errors?.minlength">Minimum 8 charactors neede d.
+                            </mat-error>
+                        </mat-form-field>
+
+                        <div class="text-center">
+                            <button class="btn " mat-raised-button color="primary" type="submit">Submit</button>
+                            <button class="btn " mat-raised-button color="warn" (click)="onClear()">Clear</button>
+                        </div>
+                        <a class="btn btn-default btn-block" [routerLink]="['/login']">Login</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
