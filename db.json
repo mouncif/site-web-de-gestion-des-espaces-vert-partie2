@@ -367,5 +367,33 @@
       "cout_travau": "123",
       "etat": false
     }
+  ],
+  "expertise": [
+    {
+      "id": 2,
+      "date_travaux": "2020-02-11T23:00:00.000Z",
+      "type_travaux": "sc",
+      "N_debut": "121",
+      "N_fin": "1212",
+      "taille": "1221",
+      "agent_responsable": "ffwef",
+      "heure": "12:12",
+      "Nom_station": "ddvdv",
+      "cout_travau": "1212",
+      "taux_avencement": "13133",
+      "References": "ev",
+      "Date_expertise": "2020-02-11T23:00:00.000Z",
+      "Hauteur": "323",
+      "Circonference": "efe",
+      "Etat_phytosanitaire": "fefe",
+      "type": "efee",
+      "Niveau_risque": "efef",
+      "Montant_unitaire": "121",
+      "Nombre_arbres": "33",
+      "Total_couts": "112",
+      "Numero_dossier": "121",
+      "Date_commande": "2020-02-11T23:00:00.000Z",
+      "action": ""
+    }
   ]
 }

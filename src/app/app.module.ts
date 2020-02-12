@@ -36,6 +36,10 @@ import { PlantationComponent } from "./plantation/plantation.component";
 import { PhytosanitaireComponent } from "./Phytosanitaire/phytosanitaire/phytosanitaire.component";
 import { PhytosanitaireService } from "./services/phytosanitaire.service";
 import { PlantationService } from "./services/plantation.service";
+import { AddExpertiseComponent } from "./add-expertise/add-expertise.component";
+import { ExpertiseService } from "./services/expertise.service";
+import { ListExpertiseComponent } from "./list-expertise/list-expertise.component";
+import { UpdateExpertiseComponent } from "./update-expertise/update-expertise.component";
 
 @NgModule({
   declarations: [
@@ -58,7 +62,10 @@ import { PlantationService } from "./services/plantation.service";
     AddStationComponent,
     UpdateStationComponent,
     PhytosanitaireComponent,
-    PlantationComponent
+    PlantationComponent,
+    AddExpertiseComponent,
+    ListExpertiseComponent,
+    UpdateExpertiseComponent
   ],
   imports: [
     BrowserModule,
@@ -80,7 +87,8 @@ import { PlantationService } from "./services/plantation.service";
     PlantationService,
     UserService,
     ReclamationService,
-    StationService
+    StationService,
+    ExpertiseService
   ],
   bootstrap: [AppComponent]
 })

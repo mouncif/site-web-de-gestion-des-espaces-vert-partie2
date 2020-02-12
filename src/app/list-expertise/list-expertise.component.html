@@ -1,0 +1,64 @@
+<div class="main-menu-area mg-tb-40">
+    <div class="container">
+        <mat-form-field>
+            <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+        </mat-form-field>
+
+        <div class="mat-elevation-z8">
+            <table mat-table [dataSource]="listData" matSort class="mat-elevation-z8">
+
+                <ng-container matColumnDef="References">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> References</th>
+                    <td mat-cell *matCellDef="let element"> {{element.References}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="Date_expertise">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Date Expertise </th>
+                    <td mat-cell *matCellDef="let element"> {{element.Date_expertise}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="Circonference">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Circonference </th>
+                    <td mat-cell *matCellDef="let element"> {{element.Circonference}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="Etat_phytosanitaire">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Etat phytosanitaire </th>
+                    <td mat-cell *matCellDef="let element"> {{element.Etat_phytosanitaire}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="Montant_unitaire">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Montant unitaire </th>
+                    <td mat-cell *matCellDef="let element"> {{element.Montant_unitaire}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="Nombre_arbres">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Nombre arbres </th>
+                    <td mat-cell *matCellDef="let element"> {{element.Nombre_arbres}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="Total_couts">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Total couts </th>
+                    <td mat-cell *matCellDef="let element"> {{element.Total_couts}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="actions">
+                    <th mat-header-cell *matHeaderCellDef> Actions </th>
+                    <td mat-cell *matCellDef="let row">
+                        <button mat-icon-button (click)="onEdit(row)">
+                            <mat-icon>launch</mat-icon>
+                        </button>
+                        <button mat-icon-button (click)="onDelete(row.id)" color="warn">
+                            <mat-icon>delete_outline</mat-icon>
+                        </button>
+                    </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+
+            <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+        </div>
+    </div>
+</div>

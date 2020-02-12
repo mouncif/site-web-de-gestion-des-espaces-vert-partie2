@@ -1,0 +1,142 @@
+<div class="main-menu-area mg-tb-40">
+    <div class="container">
+        <form [formGroup]="service.form" class="normal-form" (submit)="onSubmit()">
+            <mat-card>
+                <mat-card-content>
+                    <mat-card-title>Ajouter un travau</mat-card-title>
+                    <mat-accordion>
+                        <mat-expansion-panel>
+                            <mat-expansion-panel-header>
+                                <mat-panel-title> Expertise </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <input type="hidden" formControlName="id">
+                            <mat-form-field>
+                                <input [readonly]="!isUpdate" formControlName="type_travaux" matInput
+                                    placeholder="type travaux">
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input [readonly]="!isUpdate" formControlName="date_travaux" matInput
+                                    [matDatepicker]="picker_dossier" placeholder="Date travaux">
+                                <mat-datepicker-toggle matSuffix [for]="picker_dossier"></mat-datepicker-toggle>
+                                <mat-datepicker #picker_dossier></mat-datepicker>
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input [readonly]="!isUpdate" formControlName="N_debut" matInput
+                                    placeholder="Num debut">
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input [readonly]="!isUpdate" formControlName="N_fin" matInput placeholder="Num fin">
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input [readonly]="!isUpdate" formControlName="taille" matInput placeholder="taille">
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input [readonly]="!isUpdate" formControlName="agent_responsable" matInput
+                                    placeholder="agent responsable">
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input [readonly]="!isUpdate" formControlName="heure" matInput placeholder="heure">
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input [readonly]="!isUpdate" formControlName="Nom_station" matInput
+                                    placeholder="Nom station">
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input [readonly]="!isUpdate" formControlName="cout_travau" matInput
+                                    placeholder="cout travau">
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input [readonly]="!isUpdate" formControlName="taux_avencement" matInput
+                                    placeholder="taux avencement">
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input [readonly]="!isUpdate" formControlName="References" matInput
+                                    placeholder="References">
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input [readonly]="!isUpdate" formControlName="Date_expertise" matInput
+                                    [matDatepicker]="picker_date" placeholder="Date Expertise">
+                                <mat-datepicker-toggle matSuffix [for]="picker_date"></mat-datepicker-toggle>
+                                <mat-datepicker #picker_date></mat-datepicker>
+                            </mat-form-field>
+
+
+                            <mat-form-field>
+                                <input [readonly]="!isUpdate" formControlName="Hauteur" matInput placeholder="Hauteur">
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input [readonly]="!isUpdate" formControlName="Circonference" matInput
+                                    placeholder="Circonference">
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input [readonly]="!isUpdate" formControlName="Etat_phytosanitaire" matInput
+                                    placeholder="Etat Phytosanitaire">
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input [readonly]="!isUpdate" formControlName="type" matInput placeholder="type">
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input [readonly]="!isUpdate" formControlName="Niveau_risque" matInput
+                                    placeholder="Niveau risque">
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input [readonly]="!isUpdate" formControlName="Montant_unitaire" matInput
+                                    placeholder="Montant unitaire">
+                            </mat-form-field>
+
+
+                            <mat-form-field>
+                                <input [readonly]="!isUpdate" formControlName="Nombre_arbres" matInput
+                                    placeholder="Nombre arbres">
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input [readonly]="!isUpdate" formControlName="Total_couts" matInput
+                                    placeholder="Total couts">
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input [readonly]="!isUpdate" formControlName="Numero_dossier" matInput
+                                    placeholder="Numero_dossier">
+                            </mat-form-field>
+
+
+                            <mat-form-field>
+                                <input [readonly]="!isUpdate" formControlName="Date_commande" matInput
+                                    [matDatepicker]="Date_commande" placeholder="Date commande">
+                                <mat-datepicker-toggle matSuffix [for]="Date_commande"></mat-datepicker-toggle>
+                                <mat-datepicker #Date_commande></mat-datepicker>
+                            </mat-form-field>
+
+                        </mat-expansion-panel>
+
+
+                    </mat-accordion>
+                </mat-card-content>
+                <div class="button-row">
+                    <button mat-raised-button color="primary" type="submit" [disabled]="!isUpdate">submit</button>
+                    <button mat-raised-button color="accent" type="button" (click)="onUpdate()">Modifier</button>
+                    <button mat-raised-button color="warn" type="reset" (click)="onAnuller()">Annuler</button>
+                </div>
+            </mat-card>
+
+        </form>
+
+    </div>
+</div>

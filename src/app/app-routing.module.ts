@@ -15,6 +15,9 @@ import { UpdateStationComponent } from "./station/update-station/update-station.
 import { ListStationComponent } from "./station/list-station/list-station.component";
 import { PlantationComponent } from "./plantation/plantation.component";
 import { PhytosanitaireComponent } from "./Phytosanitaire/phytosanitaire/phytosanitaire.component";
+import { AddExpertiseComponent } from "./add-expertise/add-expertise.component";
+import { ListExpertiseComponent } from "./list-expertise/list-expertise.component";
+import { UpdateExpertiseComponent } from "./update-expertise/update-expertise.component";
 
 const routes: Routes = [
   {
@@ -70,6 +73,18 @@ const routes: Routes = [
       {
         path: "phytosanitaire",
         component: PhytosanitaireComponent
+      },
+      {
+        path: "addExpertise",
+        component: AddExpertiseComponent
+      },
+      {
+        path: "allExpertise",
+        component: ListExpertiseComponent
+      },
+      {
+        path: "updateExpertise",
+        component: UpdateExpertiseComponent
       }
     ]
   },
