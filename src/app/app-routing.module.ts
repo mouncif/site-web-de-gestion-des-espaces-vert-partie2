@@ -7,6 +7,7 @@ import { RegisterComponent } from './register/register.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { HomeComponent } from "./home/home.component";
 import { Authgard } from "../app/periodics/authGard";
+import { StatistiquesComponent } from './statistiques/statistiques.component';
 
 const routes: Routes = [
   {
@@ -30,7 +31,7 @@ const routes: Routes = [
     component: HomeComponent,
     canActivate: [Authgard],
     children: [
-      { path: '',  component: LoginComponent },
+      { path: '',  component: StatistiquesComponent },
       { path: 'log', component: LoginComponent },
       { path: 'reg', component: RegisterComponent }
     ]

@@ -22,6 +22,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ParametreComponent } from './parametre/parametre.component';
+import { StatistiquesComponent } from './statistiques/statistiques.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { ParametreComponent } from './parametre/parametre.component';
     NavbarComponent,
     NavigationComponent,
     ProfileComponent,
-    ParametreComponent
+    ParametreComponent,
+    StatistiquesComponent
   ],
   imports: [
     BrowserModule,
