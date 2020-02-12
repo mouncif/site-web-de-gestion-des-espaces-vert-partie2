@@ -11,16 +11,15 @@
                             </div>
                             <div class="col-sm-6 col-md-8">
                                 <h4>
-                                    Bhaumik Patel</h4>
-                                <small><cite title="San Francisco, USA">San Francisco, USA <i class="glyphicon glyphicon-map-marker">
-                        </i></cite></small>
+                                    {{fullname}} </h4>
+                                <small><cite title="San Francisco, USA">{{address}}, {{ville}} <i
+                      class="glyphicon glyphicon-map-marker">
+                    </i></cite></small>
                                 <p>
                                     <br />
-                                    <i class="fa big-icon fa-envelope"></i>email@example.com
+                                    <i class="fa big-icon fa-envelope"></i>{{email}}
                                     <br />
-                                    <i class="glyphicon glyphicon-globe"></i><a>www.jquery2dotnet.com</a>
-                                    <br />
-                                    <i class="glyphicon glyphicon-gift"></i>June 02, 1988</p>
+                                    <i class="fa big-icon fa-phone"></i><a> {{tel}} </a>
                             </div>
                         </div>
                     </div>
@@ -41,45 +40,44 @@
                             </div>
                             <div class="col-sm-6 col-md-8">
                                 <div class="form-group">
-                                    <div class="form-row">
-                                        <div class="col-md-6">
-                                            <div class="form-label-group">
-                                                <input type="text" id="firstName" class="form-control" placeholder="First name" required="required" autofocus="autofocus">
+                                    <form [formGroup]="service.form" class="normal-form" (submit)="update()">
+                                        <div class="form-row">
+                                            <div class="col-md-6">
+                                                <div class="form-label-group">
+                                                    <input type="text" id="firstName" class="form-control" placeholder="Nom" required="required" value=" {{nom}} " autofocus="autofocus">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-label-group">
+                                                    <input type="text" id="lastName" class="form-control" placeholder="Prenom" value=" {{prenom}} " required="required">
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-6">
-                                            <div class="form-label-group">
-                                                <input type="text" id="lastName" class="form-control" placeholder="Last name" required="required">
+
+
+                                        <div class="form-row">
+                                            <div class="col-md-12">
+                                                <div class="form-label-group">
+                                                    <input type="text" class="form-control" placeholder="Address" required="required" value=" {{ address }} " autofocus="autofocus">
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="form-row">
-                                        <div class="col-md-6">
-                                            <div class="form-label-group">
-                                                <input type="text" class="form-control" placeholder="First name" required="required" autofocus="autofocus">
+                                        <div class="form-row">
+                                            <div class="col-md-6">
+                                                <div class="form-label-group">
+                                                    <input type="text" class="form-control" placeholder="Ville" value=" {{ ville }} " required="required">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-label-group">
+                                                    <input type="text" class="form-control" placeholder="Tel" required="required" value=" {{ tel }} " autofocus="autofocus">
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-6">
-                                            <div class="form-label-group">
-                                                <input type="text" class="form-control" placeholder="Last name" required="required">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-row">
-                                        <div class="col-md-6">
-                                            <div class="form-label-group">
-                                                <input type="text" class="form-control" placeholder="First name" required="required" autofocus="autofocus">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-label-group">
-                                                <input type="text" class="form-control" placeholder="Last name" required="required">
-                                            </div>
-                                        </div>
-                                    </div>
+                                    </form>
                                 </div>
                                 <div>
-                                    <Button class="btn btn-success">Valider</Button>
+                                    <Button class="btn btn-success" type="submit">Valider</Button>
                                 </div>
                             </div>
                         </div>

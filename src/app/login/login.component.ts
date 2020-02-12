@@ -53,6 +53,8 @@ export class LoginComponent implements OnInit {
     localStorage.removeItem('ville');
     localStorage.removeItem('username');
     localStorage.removeItem('adress');
+    localStorage.removeItem("nom");
+    localStorage.removeItem("prenom");
   }
 
   onLogin(): void {
@@ -65,6 +67,8 @@ export class LoginComponent implements OnInit {
         for (var val of data) {
           if (this.user.email == val['email'] && this.user.password == val['password']) {
             localStorage.setItem("id", val["id"]);
+            localStorage.setItem("nom", val["nom"]);
+            localStorage.setItem("prenom", val["prenom"]);
             localStorage.setItem("fullname", val["nom"] + " " + val["prenom"]);
             localStorage.setItem("email", val["email"]);
             localStorage.setItem("tel", val["tel"]);

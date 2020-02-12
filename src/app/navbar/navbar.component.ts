@@ -13,8 +13,10 @@ import { ParametreComponent } from "../parametre/parametre.component";
 export class NavbarComponent implements OnInit {
 
   constructor(private router:Router, public notification: MatSnackBar, private dialog: MatDialog) { }
+  public username: string ;
 
   ngOnInit() {
+    this.username = localStorage.getItem('fullname');
   }
 
   showProfile(){
