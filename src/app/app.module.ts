@@ -44,6 +44,7 @@ import { UpdatePlantationComponent } from "./update-plantation/update-plantation
 import { ListPlantationComponent } from "./list-plantation/list-plantation.component";
 import { ListPhytosanitaireComponent } from "./list-phytosanitaire/list-phytosanitaire.component";
 import { UpdatePhytosanitaireComponent } from "./update-phytosanitaire/update-phytosanitaire.component";
+import { JardinComponent } from './jardin/jardin.component';
 
 @NgModule({
   declarations: [
@@ -73,7 +74,8 @@ import { UpdatePhytosanitaireComponent } from "./update-phytosanitaire/update-ph
     ListPlantationComponent,
     UpdatePlantationComponent,
     ListPhytosanitaireComponent,
-    UpdatePhytosanitaireComponent
+    UpdatePhytosanitaireComponent,
+    JardinComponent
   ],
   imports: [
     BrowserModule,
