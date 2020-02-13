@@ -18,7 +18,11 @@ import { PhytosanitaireComponent } from "./Phytosanitaire/phytosanitaire/phytosa
 import { AddExpertiseComponent } from "./add-expertise/add-expertise.component";
 import { ListExpertiseComponent } from "./list-expertise/list-expertise.component";
 import { UpdateExpertiseComponent } from "./update-expertise/update-expertise.component";
-import { StatistiquesComponent } from './statistiques/statistiques.component';
+import { StatistiquesComponent } from "./statistiques/statistiques.component";
+import { ListPlantationComponent } from "./list-plantation/list-plantation.component";
+import { UpdatePlantationComponent } from "./update-plantation/update-plantation.component";
+import { ListPhytosanitaireComponent } from "./list-phytosanitaire/list-phytosanitaire.component";
+import { UpdatePhytosanitaireComponent } from "./update-phytosanitaire/update-phytosanitaire.component";
 
 const routes: Routes = [
   {
@@ -72,6 +76,14 @@ const routes: Routes = [
         component: PlantationComponent
       },
       {
+        path: "allPlantation",
+        component: ListPlantationComponent
+      },
+      {
+        path: "updatePlantation",
+        component: UpdatePlantationComponent
+      },
+      {
         path: "phytosanitaire",
         component: PhytosanitaireComponent
       },
@@ -86,6 +98,14 @@ const routes: Routes = [
       {
         path: "updateExpertise",
         component: UpdateExpertiseComponent
+      },
+      {
+        path: "allPhytosanitaire",
+        component: ListPhytosanitaireComponent
+      },
+      {
+        path: "updatePhytosanitaire",
+        component: UpdatePhytosanitaireComponent
       }
     ]
   },

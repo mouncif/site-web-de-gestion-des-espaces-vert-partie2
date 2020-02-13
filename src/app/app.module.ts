@@ -40,6 +40,10 @@ import { AddExpertiseComponent } from "./add-expertise/add-expertise.component";
 import { ExpertiseService } from "./services/expertise.service";
 import { ListExpertiseComponent } from "./list-expertise/list-expertise.component";
 import { UpdateExpertiseComponent } from "./update-expertise/update-expertise.component";
+import { UpdatePlantationComponent } from "./update-plantation/update-plantation.component";
+import { ListPlantationComponent } from "./list-plantation/list-plantation.component";
+import { ListPhytosanitaireComponent } from "./list-phytosanitaire/list-phytosanitaire.component";
+import { UpdatePhytosanitaireComponent } from "./update-phytosanitaire/update-phytosanitaire.component";
 
 @NgModule({
   declarations: [
@@ -65,7 +69,11 @@ import { UpdateExpertiseComponent } from "./update-expertise/update-expertise.co
     PlantationComponent,
     AddExpertiseComponent,
     ListExpertiseComponent,
-    UpdateExpertiseComponent
+    UpdateExpertiseComponent,
+    ListPlantationComponent,
+    UpdatePlantationComponent,
+    ListPhytosanitaireComponent,
+    UpdatePhytosanitaireComponent
   ],
   imports: [
     BrowserModule,

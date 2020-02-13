@@ -42,13 +42,13 @@
     },
     {
       "id": 5,
-      "nom": "SeamlessA",
-      "prenom": "ResolverA",
+      "nom": "Seamlessa",
+      "prenom": "",
       "email": "seamless@gmail.com",
-      "tel": "05341542",
+      "tel": "",
       "password": "seamlessr",
-      "ville": "chicago",
-      "adress": "manhaten"
+      "ville": "",
+      "adress": ""
     },
     {
       "id": 6,
@@ -336,7 +336,7 @@
       "contraintes_intensite": "Eclairage",
       "risques_mecanique": "Faible",
       "taux_avencement": "Appel d'offres",
-      "cout_travau": "123",
+      "cout_travau": "1234",
       "etat": false
     }
   ],
@@ -364,7 +364,7 @@
       "irrigation": "Semi-automatique",
       "Age": 2,
       "taux_avencement": "Evaluation des expressions d'intérêt",
-      "cout_travau": "123",
+      "cout_travau": "1234",
       "etat": false
     }
   ],
