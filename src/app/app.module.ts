@@ -45,6 +45,13 @@ import { ListPlantationComponent } from "./list-plantation/list-plantation.compo
 import { ListPhytosanitaireComponent } from "./list-phytosanitaire/list-phytosanitaire.component";
 import { UpdatePhytosanitaireComponent } from "./update-phytosanitaire/update-phytosanitaire.component";
 import { JardinComponent } from './jardin/jardin.component';
+import { ListArbresComponent } from './list-arbres/list-arbres.component';
+import { ArbreComponent } from './list-arbres/list/arbre/arbre.component';
+import { DetailArbreComponent } from './list-arbres/list/detail-arbre/detail-arbre.component';
+import { ModifierArbreComponent, DeleteDialogComponent, SaveDialogComponent } from './list-arbres/list/modifier-arbre/modifier-arbre.component';
+import { NouveauArbreComponent } from './nouveau-arbre/nouveau-arbre.component';
+import { ListComponent } from './list-arbres/list/list.component';
+
 
 @NgModule({
   declarations: [
@@ -75,7 +82,15 @@ import { JardinComponent } from './jardin/jardin.component';
     UpdatePlantationComponent,
     ListPhytosanitaireComponent,
     UpdatePhytosanitaireComponent,
-    JardinComponent
+    JardinComponent,
+    ListArbresComponent,
+    ArbreComponent,
+    DetailArbreComponent,
+    ModifierArbreComponent,
+    SaveDialogComponent,
+    DeleteDialogComponent,
+    NouveauArbreComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,
@@ -90,8 +105,12 @@ import { JardinComponent } from './jardin/jardin.component';
     HttpClientModule,
     MatSnackBarModule
   ],
-  entryComponents: [ParametreComponent, ProfileComponent],
-
+  entryComponents: [
+    ParametreComponent,
+    ProfileComponent,
+    SaveDialogComponent,
+    DeleteDialogComponent
+  ],
   providers: [
     PhytosanitaireService,
     PlantationService,

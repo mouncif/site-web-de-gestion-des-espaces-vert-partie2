@@ -1,0 +1,10 @@
+<mat-card class="example-card col-md-3">
+      <img mat-card-image [src]="this.arbre.photos[0]" alt="">
+      <mat-card-title> {{ arbre.essence }} </mat-card-title>
+      <mat-card-subtitle> {{ arbre.id }} </mat-card-subtitle>
+
+      <mat-card-actions>
+          <button mat-button (click)="onClickConsulter()">Consulter</button>
+          <button mat-button (click)="onClickModifier()">Modifier</button>
+      </mat-card-actions>
+</mat-card>

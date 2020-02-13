@@ -1,0 +1,11 @@
+.example-card
+{
+    max-width: 300px;
+    margin-top: 30px;
+    margin-right: 40px;
+    margin-left: 20px;
+}
+
+img {
+  width: calc(100% + 32px) !important;
+}

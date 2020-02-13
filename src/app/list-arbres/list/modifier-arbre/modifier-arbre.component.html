@@ -1,0 +1,197 @@
+<div class="container">
+  <div class="mycontainer">
+      <h2> {{ this.arbre.essence }}  {{ this.arbre.variete }}</h2>
+      <mat-accordion multi="true">
+          <mat-expansion-panel [expanded]="true">
+              <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    Informations basic
+                  </mat-panel-title>
+              </mat-expansion-panel-header>
+
+              <div class="row">
+
+                  <mat-form-field appearance="fill" class="col-md-6">
+                    <mat-label>Essence</mat-label>
+                    <input matInput [(ngModel)]="this.arbre.essence" />
+                  </mat-form-field>
+
+                  <mat-form-field appearance="fill" class="col-md-6">
+                    <mat-label>Variete</mat-label>
+                    <input matInput [(ngModel)]="this.arbre.variete" />
+                  </mat-form-field>
+            </div>
+
+            <p>Position: </p>
+            <div class="row">
+
+                  <mat-form-field appearance="fill" class="col-md-6">
+                      <mat-label>X</mat-label>
+                      <input matInput type="number" [(ngModel)]="this.arbre.position.x"/>
+                  </mat-form-field>
+
+                  <mat-form-field appearance="fill" class="col-md-6">
+                      <mat-label>Y</mat-label>
+                      <input matInput type="number" [(ngModel)]="this.arbre.position.y"/>
+                  </mat-form-field>
+              </div>
+          </mat-expansion-panel>
+
+
+          <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    Informations phisiques
+                  </mat-panel-title>
+              </mat-expansion-panel-header>
+
+              <div class="row">
+                  <mat-form-field appearance="fill" class="col-md-4">
+                    <mat-label>Circonference</mat-label>
+                    <input matInput type="number" [(ngModel)]="this.arbre.circonference" class="example-right-align"/>
+                    <span matSuffix> &nbsp; cm</span>
+                  </mat-form-field>
+
+                  <mat-form-field appearance="fill" class="col-md-4">
+                    <mat-label>Hauteur</mat-label>
+                    <input matInput type="number" [(ngModel)]="this.arbre.hauter" class="example-right-align"/>
+                    <span matSuffix>&nbsp; m</span>
+                  </mat-form-field>
+
+                  <mat-form-field appearance="fill" class="col-md-4">
+                    <mat-label>Surface</mat-label>
+                    <input matInput type="number" [(ngModel)]="this.arbre.surface" class="example-right-align"/>
+                    <span matSuffix>&nbsp; m <sup>2</sup></span>
+                  </mat-form-field>
+
+                  <mat-form-field appearance="fill" class="col-md-4">
+                    <mat-label>Distance au batiment</mat-label>
+                    <input matInput type="number" [(ngModel)]="this.arbre.distanceAuBati" class="example-right-align"/>
+                    <span matSuffix>&nbsp; m</span>
+                  </mat-form-field>
+
+                  <mat-form-field appearance="fill" class="col-md-4">
+                    <mat-label>Contraintes batiment</mat-label>
+                    <mat-select [(value)]="this.arbre.contraintesBatiment">
+                      <mat-option value="RisqueEleve">Risque élevé</mat-option>
+                      <mat-option value="RisquePotentiel">Risque potentiel</mat-option>
+                      <mat-option value="RisqueNonEvident">Risque non évident</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+
+                  <mat-form-field appearance="fill" class="col-md-4">
+                    <mat-label>Surplomb</mat-label>
+                    <mat-select [(value)]="this.arbre.surplomb">
+                      <mat-option value="RisqueEleve">Risque élevé</mat-option>
+                      <mat-option value="RisquePotentiel">Risque potentiel</mat-option>
+                      <mat-option value="RisqueNonEvident">Risque non évident</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+              </div>
+
+          </mat-expansion-panel>
+
+
+          <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    Etat de l'arbre
+                  </mat-panel-title>
+              </mat-expansion-panel-header>
+
+
+              <div class="row">
+                  <mat-form-field appearance="fill" class="col-md-4">
+                    <mat-label>Incident racine</mat-label>
+                    <mat-select [(value)]="this.arbre.incedentRacine">
+                      <mat-option value="invisible">Invisible</mat-option>
+                      <mat-option value="surTrottoir">Sur trottoir</mat-option>
+                      <mat-option value="surChaussee">Sur chaussée</mat-option>
+                      <mat-option value="surMur">Sur mur</mat-option>
+                      <mat-option value="surBatiment">Sur bâtiment</mat-option>
+                      <mat-option value="Autres">Autres</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+
+                  <mat-form-field appearance="fill" class="col-md-4">
+                    <mat-label>Etat physiologique</mat-label>
+                    <mat-select [(value)]="this.arbre.etatPhysiologique">
+                      <mat-option value="vitaliteEleve">Vitalité élevée</mat-option>
+                      <mat-option value="vitaliteMoyenne">Vitalité moyenne</mat-option>
+                      <mat-option value="deperissementMoyen">Dépérissement moyen</mat-option>
+                      <mat-option value="Dépérissement avancé">deperissementAvance</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+
+                  <mat-form-field appearance="fill" class="col-md-4">
+                    <mat-label>Alignement</mat-label>
+                    <input matInput [(ngModel)]="this.arbre.alignement" />
+                  </mat-form-field>
+
+                  <mat-form-field appearance="fill" class="col-md-6">
+                    <mat-label>Atteintes physiologique</mat-label>
+                    <textarea matInput [(ngModel)]="this.arbre.atteintesPhysiologique" placeholder="Ex. It makes me feel..."></textarea>
+                  </mat-form-field>
+
+                  <mat-form-field appearance="fill" class="col-md-6">
+                    <mat-label>Defaults mecaniques</mat-label>
+                    <textarea matInput [(ngModel)]="this.arbre.defautsMecaniques" placeholder="Ex. It makes me feel..."></textarea>
+                  </mat-form-field>
+
+                  <mat-form-field appearance="fill" class="col-md-6">
+                    <mat-label>Pathogene</mat-label>
+                    <textarea matInput [(ngModel)]="this.arbre.pathogene" placeholder="Ex. It makes me feel..."></textarea>
+                  </mat-form-field>
+
+              </div>
+
+          </mat-expansion-panel>
+
+          <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    Photos
+                  </mat-panel-title>
+              </mat-expansion-panel-header>
+
+              <input
+                  type="file"
+                  style="display: none"
+                  (change)="onFileSelected($event)"
+                  #fileInput
+                  >
+              <button mat-fab
+                  color="primary"
+                  style="float: right; margin-bottom: 15px;"
+                  (click)="fileInput.click()">Add</button>
+
+
+              <div class="row">
+                  <div class="col-md-3"
+                      *ngFor="let photoLink of this.arbre.photos"
+                      >
+                      <img [src]="photoLink" class="d-block w-100" alt="" *ngIf="photoLink != '../../../assets/img/placeholder.png'">
+                      <button mat-button color="warn" (click)="onClickRemovePhoto($event, photoLink)" *ngIf="photoLink != '../../../assets/img/placeholder.png'">remove</button>
+                  </div>
+              </div>
+
+          </mat-expansion-panel>
+
+      </mat-accordion>
+
+
+      <div class="row" style="margin-top: 30px; margin-bottom: 40px; margin-right: auto; margin-left: auto; padding-right: 0px;">
+              <div class="col-2 col-md-2">
+                  <button mat-raised-button (click)="onDelete()" color="warn">Delete Tree</button>
+              </div>
+
+              <div class="col-md-3 offset-md-7 col-7 offset-2 col-sm-7 offset-sm-2">
+                  <button mat-raised-button (click)="onClickReset()" style="margin-left: auto; margin-right: auto">Reset</button>
+                  <button mat-raised-button (click)="onClickSave()" color="primary" style="margin-left: 5px;">Save changes</button>
+              </div>
+
+
+      </div>
+  </div>
+
+</div>

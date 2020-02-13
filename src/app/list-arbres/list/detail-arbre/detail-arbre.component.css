@@ -1,0 +1,25 @@
+#id_header
+{
+    display: inline;
+}
+
+.head-section
+{
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+#car-container
+{
+    max-height: 50%;
+}
+
+#contents
+{
+    margin-top: 30px;
+}
+
+hr
+{
+    margin-bottom: 15px;
+}

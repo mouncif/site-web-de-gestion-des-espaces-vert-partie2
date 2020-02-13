@@ -1,0 +1,63 @@
+<div class="container">
+
+  <mat-tab-group>
+      <mat-tab label="Cards">
+          <div class="row">
+              <app-arbre
+                *ngFor="let arbre of arbres"
+                [arbre]='arbre'
+              ></app-arbre>
+          </div>
+      </mat-tab>
+
+      <mat-tab label="Table">
+        <mat-form-field>
+            <mat-label>Filter</mat-label>
+            <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium">
+        </mat-form-field>
+
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+          <!-- Position Column -->
+          <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef> Id </th>
+            <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+          </ng-container>
+
+          <!-- Name Column -->
+          <ng-container matColumnDef="essence">
+            <th mat-header-cell *matHeaderCellDef> Essence </th>
+            <td mat-cell *matCellDef="let element"> {{element.essence}} </td>
+          </ng-container>
+
+          <!-- Weight Column -->
+          <ng-container matColumnDef="variete">
+            <th mat-header-cell *matHeaderCellDef> Variete </th>
+            <td mat-cell *matCellDef="let element"> {{element.variete}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="position">
+            <th mat-header-cell *matHeaderCellDef> Position </th>
+            <td mat-cell *matCellDef="let element"> ({{element.position.x}}, {{element.position.y}}) </td>
+          </ng-container>
+
+          <ng-container matColumnDef="action">
+            <th mat-header-cell *matHeaderCellDef> Action </th>
+            <td mat-cell *matCellDef="let element">
+                <button mat-button (click)="onClickConsulter($event, element.id)" color="primary" style="display: inline;">view details</button>
+                <button mat-button (click)="onClickModifier($event, element.id)" color="accent" style="display: inline;">modify</button>
+            </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+
+      </mat-tab>
+  </mat-tab-group>
+
+</div>
+
+<!-- <app-modifier-arbre></app-modifier-arbre> -->
+
+<!--<app-detail-arbre></app-detail-arbre>-->
