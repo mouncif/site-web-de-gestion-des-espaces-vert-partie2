@@ -17,21 +17,21 @@
                                     <form [formGroup]="service.form" (submit)="updatePassword()">
                                         <div class="form-row">
                                             <div class="form-label-group">
-                                                <input type="password" class="form-control" formControlName="password" placeholder="Current Password" required="required">
+                                                <input type="password" style=" width: 350px; " class="form-control" formControlName="password" placeholder="Current Password" required="required">
                                             </div>
                                         </div>
                                         <br />
                                         <div class="form-row">
                                             <div class="form-label-group">
-                                                <input type="password" class="form-control" placeholder="New Password" required="required">
+                                                <input type="password" style=" width: 350px; " class="form-control" placeholder="New Password" required="required">
                                             </div>
                                         </div>
                                         <div class="form-row">
                                             <div class="form-label-group">
-                                                <input type="password" class="form-control" placeholder="Confirm Password" required="required">
+                                                <input type="password" style=" width: 350px; " class="form-control" placeholder="Confirm Password" required="required">
                                             </div>
                                         </div>
-                                        <Button class="btn btn-success" type="submit">Valider</Button>
+                                        <Button class="btn btn-success" style=" margin-top: 10px; " type="submit">Valider</Button>
                                     </form>
                                 </div>
                             </div>
@@ -53,19 +53,22 @@
                                 <img src="../../assets/res/mailSecurit.jpg" alt="" style="height: 150px;width: 150px;" class="img-rounded img-responsive" />
                             </div>
                             <div class="col-sm-6 col-md-8">
+                              <form [formGroup]="service.form" (submit)="updateEmail()">
                                 <div>
-                                    <label>itsaudiosurgery@gmail.com</label><span style="margin-left: 15px;" class="badge badge-pill badge-success">Success</span>
+                                    <label>{{ email }}</label><span style="margin-left: 15px;" class="badge badge-pill badge-success">Success</span>
                                 </div>
                                 <br>
                                 <div class="form-group">
                                     <div class="form-label-group">
-                                        <input type="email" class="form-control" placeholder="New Email" required="required">
+                                        <input type="email"  class="form-control" formControlName="email" placeholder="New Email" required="required">
                                     </div>
                                 </div>
 
                                 <div>
-                                    <Button class="btn btn-success">Valider</Button>
+                                    <Button class="btn btn-success" style=" margin-top: 10px; "  type="submit"> Valider</Button>
                                 </div>
+
+                                </form>
                             </div>
                         </div>
                     </div>

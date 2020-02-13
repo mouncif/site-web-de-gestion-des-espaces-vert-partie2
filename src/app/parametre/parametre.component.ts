@@ -13,6 +13,7 @@ export class ParametreComponent implements OnInit {
   private confpass: string;
   private newpass: string;
   private email: string;
+
   private user: User = {
     nom: '',
     prenom: '',
@@ -29,6 +30,7 @@ export class ParametreComponent implements OnInit {
     this.service.findUser(localStorage.getItem('id')).subscribe(
       (user: User) => {
         this.password = user.password;
+        this.email = user.email;
       }
     );
   }
@@ -39,15 +41,17 @@ export class ParametreComponent implements OnInit {
 
     this.service.findUser(localStorage.getItem('id')).subscribe(
       (user: User) => {
-        this.user = user;
-        if((this.confpass == this.newpass) && (this.password == user.password)){
+        user.password = this.user.password;
+        this.service.update(user).subscribe();
+
+        /*if((this.confpass == this.newpass) && (this.password == user.password)){
           user.password = this.user.password;
           console.log(user.password );
           //this.service.update(user).subscribe();
           console.log("ok");
         }else{
           console.log("Not identique !!")
-        }
+        }*/
       }
     );
   }
@@ -60,6 +64,7 @@ export class ParametreComponent implements OnInit {
     this.service.findUser(localStorage.getItem('id')).subscribe(
       (user: User) => {
         user.email = this.user.email;
+        this.email = this.user.email;
         this.service.update(user).subscribe();
       }
     );

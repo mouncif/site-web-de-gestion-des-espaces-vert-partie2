@@ -63,6 +63,12 @@ export class ProfileComponent implements OnInit {
         user.tel = this.user.tel;
         console.log(user.id, " BLALAL");
         this.service.update(user).subscribe();
+
+        this.fullname = user.nom+" "+user.prenom;
+        this.email = user.email;
+        this.tel = user.tel;
+        this.ville = user.ville;
+        this.adress = user.adress;
         console.log("Ok");
       }
     );
