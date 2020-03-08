@@ -63,6 +63,19 @@ export class ModifierArbreComponent implements OnInit {
   }
 
   onFileSelected(event){
+    console.log(event);
+    for(let i = 0; i < event.target.files.length; i++){
+        this.arbre.photos.push('../../../assets/img/' + event.target.files[i].name);
+    }
+    for(let i = 0; i < this.arbre.photos.length; i++){
+        if(this.arbre.photos[i] == "../../../assets/img/placeholder.png"){
+            this.arbre.photos.splice(i, 1);
+        }
+    }
+    console.log(this.arbre);
+  }
+/*
+  onFileSelected(event){
     console.log(event.target.files[0].name);
     this.arbre.photos.push('../../../assets/img/' + event.target.files[0].name);
     for(let i = 0; i < this.arbre.photos.length; i++){
@@ -73,7 +86,7 @@ export class ModifierArbreComponent implements OnInit {
     }
     console.log(this.arbre);
   }
-
+*/
   onClickRemovePhoto(event, photoLink){
     this.arbre.photos.splice(this.arbre.photos.indexOf(photoLink), 1);
     if(this.arbre.photos.length == 0){
