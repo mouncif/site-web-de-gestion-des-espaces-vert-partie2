@@ -29,6 +29,7 @@ export class RegisterComponent implements OnInit {
   users: User[] = [];
 
   ngOnInit() {
+    this.onClear();
     if (localStorage.getItem('fullname') == null){
       console.log("Everything fine");
     }else{

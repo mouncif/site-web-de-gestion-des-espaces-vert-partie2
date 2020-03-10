@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
 
 
   ngOnInit() {
-
+    this.onClear();
     if (localStorage.getItem('fullname') == null){
       console.log("Everything fine");
     }else{

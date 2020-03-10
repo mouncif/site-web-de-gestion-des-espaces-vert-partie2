@@ -44,17 +44,18 @@
 
 
                         <mat-form-field class="displayB">
-                            <input formControlName="password" matInput placeholder="Password *">
+                            <input formControlName="password" type="password" matInput placeholder="Password *">
                             <mat-error *ngIf="service.form.controls['password'].errors?.required">This field is mandatory.</mat-error>
                             <mat-error *ngIf="service.form.controls['password'].errors?.minlength">Minimum 8 charactors neede d.
                             </mat-error>
                         </mat-form-field>
 
-                        <div class="text-center">
+                        <div class="button-row" style="margin-top: 15px;">
                             <button class="btn " mat-raised-button color="primary" type="submit">Submit</button>
                             <button class="btn " mat-raised-button color="warn" (click)="onClear()">Clear</button>
+                            <a style="float: right;" mat-raised-button [routerLink]="['/login']">Login</a>
                         </div>
-                        <a class="btn btn-default btn-block" [routerLink]="['/login']">Login</a>
+
                     </form>
                 </div>
             </div>

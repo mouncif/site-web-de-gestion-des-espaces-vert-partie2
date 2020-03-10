@@ -14,18 +14,20 @@
                             <mat-error>Invalid email address.</mat-error>
                         </mat-form-field>
                         <mat-form-field class="displayB">
-                            <input formControlName="password" matInput placeholder="Password *">
+                            <input formControlName="password" type="password" matInput placeholder="Password *">
                             <mat-error *ngIf="service.form.controls['password'].errors?.required">This field is mandatory.</mat-error>
                             <mat-error *ngIf="service.form.controls['password'].errors?.minlength">Minimum 8 charactors neede d.
                             </mat-error>
                         </mat-form-field>
                         <div class="checkbox login-checkbox">
-                            <label><input type="checkbox" class="i-checks"> Remember me </label>
+                            <label><input type="checkbox" class="i-checks"> <em style="margin-left: 15px;">Remember me </em></label>
                         </div>
-                        <button class="btn btn-block" mat-raised-button color="primary" type="submit">Submit</button>
-                        <button class="btn btn-block" mat-raised-button color="warn" (click)="onClear()">Clear</button>
-                        <a class="btn btn-block" [routerLink]="['/register']">Register</a>
-                        <a class="btn  btn-block" [routerLink]="['/reset']">Reset</a>
+                        <div class="button-row" style="margin-top: 15px;">
+                            <button style="width: fit-content;" mat-raised-button color="primary" type="submit">Submit</button>
+                            <button style="width: fit-content;" mat-raised-button color="warn" (click)="onClear()">Clear</button>
+                            <a style="float: right;" mat-raised-button [routerLink]="['/register']">Register</a>
+                            <a style="float: right;" mat-raised-button [routerLink]="['/reset']">Reset</a>
+                        </div>
                     </form>
                 </div>
             </div>
